@@ -6,6 +6,7 @@ public class ScTurret : MonoBehaviour
 {
     public GameObject Bullet;
     public Transform Player;
+    public float RotationSpeed;
     public float Range;
     public float RangeOfSight;
     public Transform Rotator;
@@ -18,9 +19,24 @@ public class ScTurret : MonoBehaviour
 
     private void Update()
     {
-        float Distance = Vector3.Distance(transform.position, Player.position);
-        print(Distance);
+        bool PlayerInSight = Vector3.Distance(transform.position, Player.position) < RangeOfSight;
+        print(PlayerInSight);
+
+        if (PlayerInSight == true)
+        {
+
+        }
+        else
+        {
+            Idle();
+        }
     }
+
+    public void Idle() 
+    {
+        Rotator.Rotate(0, RotationSpeed * Time.deltaTime, 0);
+    }
+
 
     public void OnDrawGizmos()
     {
