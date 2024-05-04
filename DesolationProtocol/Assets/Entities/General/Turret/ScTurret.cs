@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class ScTurret : MonoBehaviour
@@ -11,6 +12,7 @@ public class ScTurret : MonoBehaviour
     public float RangeOfSight;
     public Transform Rotator;
     public Transform ShootPoint;
+    public LayerMask PerceptibleLayer;
 
     private void Start()
     {
@@ -24,10 +26,29 @@ public class ScTurret : MonoBehaviour
 
         if (PlayerInSight == true)
         {
+            print("Player in sight");
+            Vector3 DirectionToPlayer = (Player.position - Rotator.position).normalized;
+            DirectionToPlayer.y = 0;
 
+            Debug.DrawRay(Rotator.position, DirectionToPlayer*RangeOfSight, Color.green);
+
+            if (Physics.Raycast(Rotator.position, DirectionToPlayer, out RaycastHit Hit,RangeOfSight,PerceptibleLayer))
+            {
+                if (Hit.transform == Player.transform)
+                {
+                    print("Te veo");
+                    Aim(DirectionToPlayer);
+                }
+                else
+                {
+                    print("No te veo");
+                }
+            }
+            
         }
         else
         {
+            print("Player out of sight");
             Idle();
         }
     }
@@ -37,6 +58,11 @@ public class ScTurret : MonoBehaviour
         Rotator.Rotate(0, RotationSpeed * Time.deltaTime, 0);
     }
 
+    public void Aim(Vector3 Direction)
+    {
+        Quaternion lookRotation = Quaternion.LookRotation(Direction);
+        Rotator.rotation = Quaternion.Slerp(Rotator.rotation, lookRotation, Time.deltaTime * RotationSpeed * 0.25f);
+    }
 
     public void OnDrawGizmos()
     {
