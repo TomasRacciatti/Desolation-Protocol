@@ -29,9 +29,10 @@ public class ScTank : MonoBehaviour
     {
         _agent.SetDestination(Player.position);
 
-    }
-    
 
+    }
+
+    
 
 
 }
