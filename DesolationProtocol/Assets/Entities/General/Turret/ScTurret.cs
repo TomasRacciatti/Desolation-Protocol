@@ -14,6 +14,9 @@ public class ScTurret : MonoBehaviour
     public Transform ShootPoint;
     public LayerMask PerceptibleLayer;
 
+    public float FireRate;
+    private float _counter;
+
     private void Start()
     {
         //Player = FindObjectOfType<Player>().transform;           
@@ -21,10 +24,12 @@ public class ScTurret : MonoBehaviour
 
     private void Update()
     {
+        _counter += Time.deltaTime;
+        
         bool PlayerInSight = Vector3.Distance(transform.position, Player.position) < RangeOfSight;
         print(PlayerInSight);
 
-        if (PlayerInSight == true)
+        if (PlayerInSight == true)   //chequeamos si ve o no al jugador
         {
             print("Player in sight");
             Vector3 DirectionToPlayer = (Player.position - Rotator.position).normalized;
@@ -34,7 +39,7 @@ public class ScTurret : MonoBehaviour
 
             if (Physics.Raycast(Rotator.position, DirectionToPlayer, out RaycastHit Hit,RangeOfSight,PerceptibleLayer))
             {
-                if (Hit.transform == Player.transform)
+                if (Hit.transform == Player.transform) //si lo ve hacemos que apunte al jugador
                 {
                     print("Te veo");
                     Aim(DirectionToPlayer);
@@ -42,6 +47,7 @@ public class ScTurret : MonoBehaviour
                 else
                 {
                     print("No te veo");
+                    Idle();
                 }
             }
             
@@ -60,8 +66,30 @@ public class ScTurret : MonoBehaviour
 
     public void Aim(Vector3 Direction)
     {
-        Quaternion lookRotation = Quaternion.LookRotation(Direction);
-        Rotator.rotation = Quaternion.Slerp(Rotator.rotation, lookRotation, Time.deltaTime * RotationSpeed * 0.25f);
+        Quaternion QuaDirection = Quaternion.LookRotation(Direction);
+        Rotator.rotation = Quaternion.Slerp(Rotator.rotation, QuaDirection, Time.deltaTime * RotationSpeed * 0.25f); //uso slerp porque es mas fluido y rapido que RotateTowards
+
+        Debug.DrawRay(Rotator.position, Rotator.forward * Range, Color.red);
+
+        if (Physics.Raycast(Rotator.position, Rotator.forward, out RaycastHit Hit, Range, PerceptibleLayer))
+        {
+            if (Hit.transform == Player.transform) 
+            {
+                print("Te Disparo");
+                Fire();
+
+            }
+            
+        }
+    }
+
+    public void Fire()
+    {
+        if(_counter >= FireRate)
+        {
+            _counter = 0;
+            Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
+        }
     }
 
     public void OnDrawGizmos()
