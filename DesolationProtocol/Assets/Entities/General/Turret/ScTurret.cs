@@ -13,13 +13,15 @@ public class ScTurret : MonoBehaviour
     public Transform Rotator;
     public Transform ShootPoint;
     public LayerMask PerceptibleLayer;
+    public bool TurretOn;
 
     public float FireRate;
     private float _counter;
 
     private void Start()
     {
-        //Player = FindObjectOfType<Player>().transform;           
+        //Player = FindObjectOfType<Player>().transform;
+        TurretOn = true;
     }
 
     private void Update()
@@ -27,36 +29,39 @@ public class ScTurret : MonoBehaviour
         _counter += Time.deltaTime;
         
         bool PlayerInSight = Vector3.Distance(transform.position, Player.position) < RangeOfSight;
-        print(PlayerInSight);
-
-        if (PlayerInSight == true)   //chequeamos si ve o no al jugador
+        //print(PlayerInSight);
+        if (TurretOn == true)
         {
-            print("Player in sight");
-            Vector3 DirectionToPlayer = (Player.position - Rotator.position).normalized;
-            DirectionToPlayer.y = 0;
-
-            Debug.DrawRay(Rotator.position, DirectionToPlayer*RangeOfSight, Color.green);
-
-            if (Physics.Raycast(Rotator.position, DirectionToPlayer, out RaycastHit Hit,RangeOfSight,PerceptibleLayer))
+            if (PlayerInSight == true )   //chequeamos si ve o no al jugador
             {
-                if (Hit.transform == Player.transform) //si lo ve hacemos que apunte al jugador
+                //print("Player in sight");
+                Vector3 DirectionToPlayer = (Player.position - Rotator.position).normalized;
+                DirectionToPlayer.y = 0;
+
+                Debug.DrawRay(Rotator.position, DirectionToPlayer * RangeOfSight, Color.green);
+
+                if (Physics.Raycast(Rotator.position, DirectionToPlayer, out RaycastHit Hit, RangeOfSight, PerceptibleLayer))
                 {
-                    print("Te veo");
-                    Aim(DirectionToPlayer);
+                    if (Hit.transform == Player.transform) //si lo ve hacemos que apunte al jugador
+                    {
+                        //print("Te veo");
+                        Aim(DirectionToPlayer);
+                    }
+                    else
+                    {
+                        //print("No te veo");
+                        Idle();
+                    }
                 }
-                else
-                {
-                    print("No te veo");
-                    Idle();
-                }
+
             }
-            
+            else
+            {
+                //print("Player out of sight");
+                Idle();
+            }
         }
-        else
-        {
-            print("Player out of sight");
-            Idle();
-        }
+        
     }
 
     public void Idle() 
@@ -75,7 +80,7 @@ public class ScTurret : MonoBehaviour
         {
             if (Hit.transform == Player.transform) 
             {
-                print("Te Disparo");
+                //print("Te Disparo");
                 Fire();
 
             }
@@ -90,6 +95,23 @@ public class ScTurret : MonoBehaviour
             _counter = 0;
             Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
         }
+    }
+
+    public void TurnOn()
+    {
+        TurretOn = true;
+        Rotator.Rotate(-40, 0, 0);
+    }
+    public void TurnOff()
+    {
+        if(TurretOn == true)
+        {
+            print("Me apague");
+            TurretOn = false;
+            Rotator.Rotate(40,0,0);
+        }
+        Invoke("TurnOn", 10f);
+        
     }
 
     public void OnDrawGizmos()
