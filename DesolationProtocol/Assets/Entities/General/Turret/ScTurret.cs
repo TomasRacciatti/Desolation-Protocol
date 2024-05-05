@@ -80,7 +80,7 @@ public class ScTurret : MonoBehaviour
         {
             if (Hit.transform == Player.transform) 
             {
-                //print("Te Disparo");
+                //print("Te disparo");
                 Fire();
 
             }
