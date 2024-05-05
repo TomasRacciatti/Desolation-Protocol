@@ -20,7 +20,7 @@ public class ScTurret : MonoBehaviour
 
     private void Start()
     {
-        //Player = FindObjectOfType<Player>().transform;
+        Player = FindObjectOfType<ScPlayer>().transform;
         TurretOn = true;
     }
 
