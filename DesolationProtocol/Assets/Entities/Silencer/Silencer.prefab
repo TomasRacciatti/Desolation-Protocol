@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkDistance: 20
-  SilenceDistance: 40
+  SilenceDistance: 30
 --- !u!114 &7634127929778258206
 MonoBehaviour:
   m_ObjectHideFlags: 0
