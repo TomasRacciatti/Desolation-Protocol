@@ -35,6 +35,8 @@ public class ScEntity : MonoBehaviour
 
     private Animator _anim;
 
+    public event Action HealthUI;
+
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -48,6 +50,10 @@ public class ScEntity : MonoBehaviour
         SetStats();
         _jumps = totaljumps;
         health = Stats.maxHealth;
+        if (HealthUI != null)
+        {
+            HealthUI();
+        }
     }
 
     private void SetStats()
@@ -110,12 +116,20 @@ public class ScEntity : MonoBehaviour
         {
             //morir
         }
+        if (HealthUI != null)
+        {
+            HealthUI();
+        }
     }
 
     public void Heal(float heal)
     {
         health += heal;
         if (health > Stats.maxHealth) health = Stats.maxHealth;
+        if (HealthUI != null)
+        {
+            HealthUI();
+        }
     }
 
     public void Jump(bool forced = false)

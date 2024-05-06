@@ -4,7 +4,7 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 using static UnityEngine.InputSystem.InputAction;
 
 public class ScPlayer : MonoBehaviour
@@ -13,12 +13,15 @@ public class ScPlayer : MonoBehaviour
     private Rigidbody _rigidbody;
     private Transform _transform;
     [SerializeField] private float sens = 1;
+    [SerializeField] private Slider HP;
 
     private void Awake()
     {
         _entity = GetComponentInParent<ScEntity>();
         _rigidbody = GetComponentInParent<Rigidbody>();
         _transform = GetComponentInChildren<Transform>();
+
+        _entity.HealthUI += CountHP;
     }
 
     private void Update()
@@ -74,5 +77,10 @@ public class ScPlayer : MonoBehaviour
     public void TryAbility3(InputAction.CallbackContext CallbackContext)
     {
         TryAbility(CallbackContext, 3);
+    }
+
+    public void CountHP()
+    {
+        HP.value = _entity.health / _entity.Stats.maxHealth;
     }
 }
