@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: f0dbe2b4217e35942a6facfe50dc253e, type: 3}
       propertyPath: m_Name
-      value: Wall_Corner Variant
+      value: BM_Wall_Corner
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f0dbe2b4217e35942a6facfe50dc253e, type: 3}
       propertyPath: m_LocalScale.x
@@ -26,15 +26,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f0dbe2b4217e35942a6facfe50dc253e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.2296588
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f0dbe2b4217e35942a6facfe50dc253e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9200096
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f0dbe2b4217e35942a6facfe50dc253e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.015644
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f0dbe2b4217e35942a6facfe50dc253e, type: 3}
       propertyPath: m_LocalRotation.w
