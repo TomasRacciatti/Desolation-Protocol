@@ -9,6 +9,7 @@ public class ScAbilityDash : ScAbility
 {
     [SerializeField] private float strength;
     [SerializeField] private float duration;
+    [SerializeField] private AnimationCurve timeline;
     protected override void Activate(ScEntity entity)
     {
         base.Activate(entity);
@@ -19,12 +20,21 @@ public class ScAbilityDash : ScAbility
     {
         Rigidbody _rigidbody = entity.GetComponent<Rigidbody>();
         _rigidbody.velocity = new Vector3(0, _rigidbody.velocity.y, 0);
-        Vector3 direction = _rigidbody.transform.forward;
+        Vector3 direction;
+        ScEntityPlayer player = entity.GetComponent<ScEntityPlayer>();
+        if (player && player.movement != Vector3.zero)
+        {
+            direction = Quaternion.LookRotation(_rigidbody.transform.forward, _rigidbody.transform.up) * player.movement;
+        }
+        else
+        {
+            direction = _rigidbody.transform.forward;
+        }
 
         float timer = 0f;
         while (timer < duration)
         {
-            _rigidbody.AddForce(direction * strength, ForceMode.Impulse);
+            _rigidbody.AddForce(direction * strength * timeline.Evaluate(timer), ForceMode.Impulse);
             timer += Time.fixedDeltaTime;
             yield return new WaitForFixedUpdate();
         }
