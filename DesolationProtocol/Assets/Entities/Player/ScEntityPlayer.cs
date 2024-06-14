@@ -16,6 +16,7 @@ public class ScEntityPlayer : ScEntity
     public float airControl = 0.8f;
     public bool landed = true;
     public float experience = 0f;
+    public AudioManager AudioManager;
 
     protected override void Awake()
     {
@@ -197,5 +198,10 @@ public class ScEntityPlayer : ScEntity
         {
             Hud.TogglePause();
         }
+    }
+
+    public void PlaySoundFoot()
+    {
+        AudioManager.PlaySound("Player","SFX_player","Run");
     }
 }
