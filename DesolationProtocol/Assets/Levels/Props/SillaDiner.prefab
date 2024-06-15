@@ -9,6 +9,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ef02e8d45e9f44246afefbc74278e299, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ef02e8d45e9f44246afefbc74278e299, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ef02e8d45e9f44246afefbc74278e299, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ef02e8d45e9f44246afefbc74278e299, type: 3}
       propertyPath: m_LocalPosition.x
       value: 70.05276
       objectReference: {fileID: 0}
@@ -48,9 +60,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ef02e8d45e9f44246afefbc74278e299, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ef02e8d45e9f44246afefbc74278e299, type: 3}
       propertyPath: m_Name
-      value: Wood_chair_1_low Variant
+      value: SillaDiner
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

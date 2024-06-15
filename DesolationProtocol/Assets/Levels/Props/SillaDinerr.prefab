@@ -9,6 +9,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 43d375eee6648c948946e674334cbe1a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 43d375eee6648c948946e674334cbe1a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 43d375eee6648c948946e674334cbe1a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 43d375eee6648c948946e674334cbe1a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 70.687874
       objectReference: {fileID: 0}
@@ -48,6 +60,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 43d375eee6648c948946e674334cbe1a, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -7998761136005395507, guid: 43d375eee6648c948946e674334cbe1a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -66,7 +82,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 32e455944979d0844a51f32f855738f4, type: 2}
     - target: {fileID: 919132149155446097, guid: 43d375eee6648c948946e674334cbe1a, type: 3}
       propertyPath: m_Name
-      value: chair_100_LP Variant
+      value: SillaDinerr
       objectReference: {fileID: 0}
     - target: {fileID: 1549579507723365926, guid: 43d375eee6648c948946e674334cbe1a, type: 3}
       propertyPath: m_Materials.Array.data[0]
