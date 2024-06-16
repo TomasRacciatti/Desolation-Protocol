@@ -9,6 +9,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 14238a12647ecd74ebd9892b26d2cce5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 60.000004
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 14238a12647ecd74ebd9892b26d2cce5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 60.000004
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 14238a12647ecd74ebd9892b26d2cce5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 60.000004
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 14238a12647ecd74ebd9892b26d2cce5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 57.264107
       objectReference: {fileID: 0}
@@ -54,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d141bfb100b1e994e86bf93d4d33fb6a, type: 2}
     - target: {fileID: 919132149155446097, guid: 14238a12647ecd74ebd9892b26d2cce5, type: 3}
       propertyPath: m_Name
-      value: Workdesk Variant
+      value: Escritorio
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
