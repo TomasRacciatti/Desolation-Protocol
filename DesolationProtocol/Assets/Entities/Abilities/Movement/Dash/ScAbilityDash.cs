@@ -30,10 +30,12 @@ public class ScAbilityDash : ScAbility
         {
             direction = _rigidbody.transform.forward;
         }
-
+        Camera camara = player.FocusRotator.GetComponent<Camera>();
+        //float fov = Camera
         float timer = 0f;
         while (timer < duration)
         {
+            _rigidbody.velocity = new Vector3(_rigidbody.velocity.x, 0, _rigidbody.velocity.z);
             _rigidbody.AddForce(direction * strength * timeline.Evaluate(timer), ForceMode.Impulse);
             timer += Time.fixedDeltaTime;
             yield return new WaitForFixedUpdate();
