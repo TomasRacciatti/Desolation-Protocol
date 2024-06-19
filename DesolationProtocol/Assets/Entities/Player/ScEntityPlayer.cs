@@ -7,7 +7,7 @@ using static UnityEngine.InputSystem.InputAction;
 
 public class ScEntityPlayer : ScEntity
 {
-    [SerializeField] private Transform FocusRotator;
+    [SerializeField] public Transform FocusRotator;
     [SerializeField] public float sens = 1;
     [SerializeField] private ScHud Hud;
     public Vector3 movement;

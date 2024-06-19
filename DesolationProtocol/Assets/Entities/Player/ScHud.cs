@@ -9,6 +9,13 @@ public class ScHud : MonoBehaviour
     [SerializeField] ScEntity _entity;
     [SerializeField] private Slider HpBar;
 
+    private void Start()
+    {
+        Time.timeScale = 1.0f;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     public void TogglePause()
     {
         if (MenuPausa.activeSelf)
@@ -30,6 +37,9 @@ public class ScHud : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene("Level_MilitaryBase");
+        Time.timeScale = 1.0f;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void MainMenu()
