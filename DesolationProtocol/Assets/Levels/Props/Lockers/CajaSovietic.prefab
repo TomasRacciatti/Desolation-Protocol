@@ -9,6 +9,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 4bec40580e0f74b4d87a18885ca689a0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4bec40580e0f74b4d87a18885ca689a0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4bec40580e0f74b4d87a18885ca689a0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4bec40580e0f74b4d87a18885ca689a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32.064774
       objectReference: {fileID: 0}
@@ -48,6 +60,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4bec40580e0f74b4d87a18885ca689a0, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -8444229102276612587, guid: 4bec40580e0f74b4d87a18885ca689a0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -62,7 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 675a2b507b55c894c9f9ba785cc837e3, type: 2}
     - target: {fileID: 919132149155446097, guid: 4bec40580e0f74b4d87a18885ca689a0, type: 3}
       propertyPath: m_Name
-      value: WoodenAmmoBox_LP Variant
+      value: CajaSovietic
       objectReference: {fileID: 0}
     - target: {fileID: 2062803167261857854, guid: 4bec40580e0f74b4d87a18885ca689a0, type: 3}
       propertyPath: m_Materials.Array.data[0]
