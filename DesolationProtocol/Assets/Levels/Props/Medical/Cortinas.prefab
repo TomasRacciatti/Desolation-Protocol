@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1ebee1235745e8248a355df8fa73ee47, type: 2}
     - target: {fileID: 919132149155446097, guid: c9e36012348b9d24186094cafcb358f1, type: 3}
       propertyPath: m_Name
-      value: Emergency injection hospital curtain Variant
+      value: Cortinas
       objectReference: {fileID: 0}
     - target: {fileID: 1415832088092921694, guid: c9e36012348b9d24186094cafcb358f1, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -65,7 +65,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 1ebee1235745e8248a355df8fa73ee47, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -2845779275431937956, guid: c9e36012348b9d24186094cafcb358f1, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9e36012348b9d24186094cafcb358f1, type: 3}
