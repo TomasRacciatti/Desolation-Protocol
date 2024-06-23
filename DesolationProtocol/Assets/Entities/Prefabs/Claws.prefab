@@ -2385,6 +2385,7 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
+  AudioManager: {fileID: 7233962902174478931, guid: 3c69731ca22a1874683f93c14290519e, type: 3}
   _playerInAttackRange: 0
   _claws: {fileID: 5433072789715674406}
 --- !u!95 &4585528647848392118

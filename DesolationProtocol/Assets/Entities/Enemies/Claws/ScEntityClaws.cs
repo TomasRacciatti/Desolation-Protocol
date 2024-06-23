@@ -62,4 +62,11 @@ public class ScEntityClaws : ScEntityEnemy
     {
         _claws.SetActive(false);
     }
+
+    public override void TakeDamage(float incomingDamage, float incomingPenLinear = 0, float incomingPenPerc = 0)
+    {
+        base.TakeDamage(incomingDamage, incomingPenLinear, incomingPenPerc);
+        AudioManager.PlaySound("SFX","monsterHurt");
+
+    }
 }

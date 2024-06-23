@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem.HID;
 
 public class ScEntityTank : ScEntityEnemy
 {
@@ -21,5 +22,11 @@ public class ScEntityTank : ScEntityEnemy
                 _anim.SetBool("InRange", false);
             }
         }
+    }
+    public override void TakeDamage(float incomingDamage, float incomingPenLinear = 0, float incomingPenPerc = 0)
+    {
+        base.TakeDamage(incomingDamage, incomingPenLinear, incomingPenPerc);
+        AudioManager.PlaySound("SFX", "monsterHurt");
+
     }
 }
