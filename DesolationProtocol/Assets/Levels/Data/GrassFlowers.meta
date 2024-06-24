@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:DesolationProtocol/Assets/Entities/Traps/TexturasTrap.meta
+guid: 1f976ae57cd03fe4a8de490704259e30
+========
 guid: 5b65e855f725d3c4997ec9b0024672f0
+>>>>>>>> Main2:DesolationProtocol/Assets/Levels/Data/GrassFlowers.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
