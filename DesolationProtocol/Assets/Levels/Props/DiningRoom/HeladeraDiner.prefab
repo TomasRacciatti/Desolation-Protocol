@@ -50,10 +50,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7758c3bb7d3aff74685283bc8fdc3a22, type: 3}
       propertyPath: m_Name
-      value: fridge Variant
+      value: HeladeraDiner
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7758c3bb7d3aff74685283bc8fdc3a22, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7758c3bb7d3aff74685283bc8fdc3a22, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3978363001276764586}
   m_SourcePrefab: {fileID: 100100000, guid: 7758c3bb7d3aff74685283bc8fdc3a22, type: 3}
+--- !u!1 &7085363002452379260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7758c3bb7d3aff74685283bc8fdc3a22, type: 3}
+  m_PrefabInstance: {fileID: 7968325476438752045}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &3978363001276764586
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7085363002452379260}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0075749736, y: 0.007788569, z: 0.018787622}
+  m_Center: {x: 0.0000028079205, y: -0.00017720353, z: 0.009397721}
