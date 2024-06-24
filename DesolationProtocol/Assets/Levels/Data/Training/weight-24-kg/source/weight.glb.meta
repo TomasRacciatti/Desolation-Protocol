@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:DesolationProtocol/Assets/Audio/ambientSound.meta
+guid: 79b0123b8c2406f4598e75abcc5fb092
+folderAsset: yes
+========
 guid: 7af1e96cfe03d0546a944e61d10710cc
+>>>>>>>> Main2:DesolationProtocol/Assets/Levels/Data/Training/weight-24-kg/source/weight.glb.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
