@@ -86,7 +86,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 00e26eb6097bfca4d98a02c18edf461a, type: 2}
     - target: {fileID: 919132149155446097, guid: 00aedf4176043fb43add577f27152f44, type: 3}
       propertyPath: m_Name
-      value: Victorian Bookcase Tall and Small Variant
+      value: Libreria2
       objectReference: {fileID: 0}
     - target: {fileID: 3202984525959183420, guid: 00aedf4176043fb43add577f27152f44, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -119,5 +119,63 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5520866373616471344, guid: 00aedf4176043fb43add577f27152f44, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4370561934828363226}
+    - targetCorrespondingSourceObject: {fileID: -2416859421013862763, guid: 00aedf4176043fb43add577f27152f44, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6318047435095569542}
   m_SourcePrefab: {fileID: 100100000, guid: 00aedf4176043fb43add577f27152f44, type: 3}
+--- !u!1 &2885284730899326021 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2416859421013862763, guid: 00aedf4176043fb43add577f27152f44, type: 3}
+  m_PrefabInstance: {fileID: 8538543437433369296}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &6318047435095569542
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885284730899326021}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0035700018, y: 0.009540005, z: 0.017999992}
+  m_Center: {x: -0.00003500031, y: 2.692639e-10, z: 0.008999988}
+--- !u!1 &4242688486672072672 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5520866373616471344, guid: 00aedf4176043fb43add577f27152f44, type: 3}
+  m_PrefabInstance: {fileID: 8538543437433369296}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &4370561934828363226
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4242688486672072672}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.009540006, y: 0.0035700027, z: 0.012000001}
+  m_Center: {x: -0.00000002971412, y: -0.00003505963, z: 0.0059999893}
