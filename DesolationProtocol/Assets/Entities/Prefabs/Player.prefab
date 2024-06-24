@@ -472,7 +472,8 @@ MonoBehaviour:
     m_Bits: 897
   bulletsLeft: 0
   fpsCam: {fileID: 4847919556903865731}
-  atackPoint: {fileID: 0}
+  atackPoint: {fileID: 8252955584559859599}
+  AudioManager: {fileID: 0}
 --- !u!1 &6215060015507259982
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,6 +627,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1740e2bebdc30b846a6f10f9a11f7143, type: 3}
+--- !u!4 &8252955584559859599 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3533125279236389626, guid: 1740e2bebdc30b846a6f10f9a11f7143, type: 3}
+  m_PrefabInstance: {fileID: 4863973187988372853}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8534942393355302729 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3887302722370619964, guid: 1740e2bebdc30b846a6f10f9a11f7143, type: 3}
