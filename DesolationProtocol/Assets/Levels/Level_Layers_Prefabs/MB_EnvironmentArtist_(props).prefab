@@ -26598,6 +26598,7 @@ GameObject:
   - component: {fileID: 36543413802759303}
   - component: {fileID: 645742461807217580}
   - component: {fileID: 776992632475386044}
+  - component: {fileID: 9145421393232804149}
   m_Layer: 13
   m_Name: Palisade2 (1)
   m_TagString: Untagged
@@ -26670,6 +26671,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &9145421393232804149
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5776651218549840911}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.4999573, y: 2.8129754, z: 0.2674228}
+  m_Center: {x: -1.2499787, y: 1.4064877, z: 0.033711396}
 --- !u!1 &5777353911086656575
 GameObject:
   m_ObjectHideFlags: 0
@@ -40279,6 +40301,7 @@ GameObject:
   - component: {fileID: 7605316586432130784}
   - component: {fileID: 2518541636072931529}
   - component: {fileID: 6958937258900275936}
+  - component: {fileID: 1297819399955131217}
   m_Layer: 13
   m_Name: Palisade2
   m_TagString: Untagged
@@ -40351,6 +40374,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1297819399955131217
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8319812902881046451}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.4999573, y: 2.8129754, z: 0.2674228}
+  m_Center: {x: -1.249971, y: 1.4064877, z: 0.033711396}
 --- !u!1 &8322831347586237369
 GameObject:
   m_ObjectHideFlags: 0
@@ -83020,6 +83064,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4483411988618394221}
     m_Modifications:
+    - target: {fileID: 3758637431860136007, guid: e6bd1d46886c46e47a5ee81b17188f5f, type: 3}
+      propertyPath: Turret
+      value: 
+      objectReference: {fileID: 7872377876866298358, guid: 1c6053fa2bf060a458a366ee1b4455b2, type: 2}
     - target: {fileID: 6076291598921899938, guid: e6bd1d46886c46e47a5ee81b17188f5f, type: 3}
       propertyPath: m_Name
       value: Boton1
