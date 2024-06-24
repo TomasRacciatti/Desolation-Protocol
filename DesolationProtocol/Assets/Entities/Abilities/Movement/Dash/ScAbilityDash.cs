@@ -30,8 +30,6 @@ public class ScAbilityDash : ScAbility
         {
             direction = _rigidbody.transform.forward;
         }
-        Camera camara = player.FocusRotator.GetComponent<Camera>();
-        //float fov = Camera
         float timer = 0f;
         while (timer < duration)
         {
