@@ -22,6 +22,9 @@ public class ScWeapon : MonoBehaviour
     public Transform atackPoint;
     private Animator _anim;
 
+
+    public AudioManager AudioManager;
+
     private void Awake()
     {
         bulletsLeft = magazineSize;
@@ -35,6 +38,7 @@ public class ScWeapon : MonoBehaviour
         {
 
             Shoot();
+            AudioManager.PlaySound("Player", "shoot");
 
         }
     }

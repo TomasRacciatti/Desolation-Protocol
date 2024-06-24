@@ -1,7 +1,15 @@
 using UnityEngine;
+using UnityEngine.InputSystem.HID;
 
 public class ScEntityTank : ScEntityEnemy
 {
+
+    protected override void Awake()
+    {
+        base.Awake();
+        _audioSource = GetComponent<AudioSource>();
+    }
+
     protected override void Update()
     {
         base.Update();
@@ -21,5 +29,11 @@ public class ScEntityTank : ScEntityEnemy
                 _anim.SetBool("InRange", false);
             }
         }
+    }
+    public override void TakeDamage(float incomingDamage, float incomingPenLinear = 0, float incomingPenPerc = 0)
+    {
+        base.TakeDamage(incomingDamage, incomingPenLinear, incomingPenPerc);
+        _audioSource.Play();
+
     }
 }
