@@ -52,14 +52,30 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1ebee1235745e8248a355df8fa73ee47, type: 2}
+    - target: {fileID: -4409553967980795369, guid: c9e36012348b9d24186094cafcb358f1, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c9e36012348b9d24186094cafcb358f1, type: 3}
       propertyPath: m_Name
       value: Cortinas
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c9e36012348b9d24186094cafcb358f1, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1415832088092921694, guid: c9e36012348b9d24186094cafcb358f1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1ebee1235745e8248a355df8fa73ee47, type: 2}
+    - target: {fileID: 3015375989234949221, guid: c9e36012348b9d24186094cafcb358f1, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548383856953634113, guid: c9e36012348b9d24186094cafcb358f1, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9219426064116096121, guid: c9e36012348b9d24186094cafcb358f1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -68,5 +84,34 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: -2845779275431937956, guid: c9e36012348b9d24186094cafcb358f1, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -4409553967980795369, guid: c9e36012348b9d24186094cafcb358f1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6506754340616360636}
   m_SourcePrefab: {fileID: 100100000, guid: c9e36012348b9d24186094cafcb358f1, type: 3}
+--- !u!1 &4788364266274478304 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4409553967980795369, guid: c9e36012348b9d24186094cafcb358f1, type: 3}
+  m_PrefabInstance: {fileID: 53394386005914359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &6506754340616360636
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4788364266274478304}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.00044712573, y: 0.023485849, z: 0.008542286}
+  m_Center: {x: 0.0000002130692, y: -0.011592933, z: -8.237269e-17}

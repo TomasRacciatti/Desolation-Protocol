@@ -14,9 +14,7 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance;
 
 
-    /*[SerializeField] private AudioMixerSnapshot Paused, Unpaused;
 
-    [SerializeField] private bool paused;*/
 
 
     public void Awake()
@@ -25,20 +23,13 @@ public class AudioManager : MonoBehaviour
     }
     public void Start()
     {
-        //Mixer.GetFloat("Master",out );
-    }
-    private void Update()
-    {
-        //agregar codigo de pausa 
-
-        
+        PlaySound("Music", "ambiente2");
     }
 
-    public void PlaySound(string nameSource,string nameGroup,string nameClip)
+    public void PlaySound(string nameSource,string nameClip)
     {
        
         AudioSource source = SearchSource(nameSource);
-        AudioMixerGroup group = SearchGroup(nameGroup);
         AudioClip clip = SearchAudio(nameClip);
         if (clip != null)
         {

@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:DesolationProtocol/Assets/Audio/mobSound.meta
+guid: 2d9677f5994abe74cbfdb5e480548c1e
+folderAsset: yes
+========
 guid: f74fa2e1f8b141443a50794bf856443c
+>>>>>>>> Main2:DesolationProtocol/Assets/Levels/Data/Training/weight-24-kg/source/weight.usdz.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

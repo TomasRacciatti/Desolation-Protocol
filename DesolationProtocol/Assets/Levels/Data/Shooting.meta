@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:DesolationProtocol/Assets/Audio/playerSound.meta
+guid: a9029b4bfc08b7a4890baf8f61795fc2
+========
 guid: 5f0c6784c3bddbe47bed246b7eab7d6a
+>>>>>>>> Main2:DesolationProtocol/Assets/Levels/Data/Shooting.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

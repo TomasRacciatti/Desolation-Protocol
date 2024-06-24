@@ -48,17 +48,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6125163442432270733, guid: adb865d0ae8404d4f9d4d7b566878225, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: -4343877936074753207, guid: adb865d0ae8404d4f9d4d7b566878225, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 993d21bb82b9adf448d3e13b8332250d, type: 2}
+    - target: {fileID: -2518971278656802226, guid: adb865d0ae8404d4f9d4d7b566878225, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: -2504848885716735427, guid: adb865d0ae8404d4f9d4d7b566878225, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: -420448403544543804, guid: adb865d0ae8404d4f9d4d7b566878225, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e66a225c63acf084d8b63ebcd8acdd1d, type: 2}
     - target: {fileID: 919132149155446097, guid: adb865d0ae8404d4f9d4d7b566878225, type: 3}
       propertyPath: m_Name
-      value: lp uv Variant
+      value: MesaMedio
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: adb865d0ae8404d4f9d4d7b566878225, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1013158901317115304, guid: adb865d0ae8404d4f9d4d7b566878225, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4382518863864031555, guid: adb865d0ae8404d4f9d4d7b566878225, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8651910402003653220, guid: adb865d0ae8404d4f9d4d7b566878225, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -67,5 +91,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -2518971278656802226, guid: adb865d0ae8404d4f9d4d7b566878225, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6724645775110934759}
   m_SourcePrefab: {fileID: 100100000, guid: adb865d0ae8404d4f9d4d7b566878225, type: 3}
+--- !u!1 &156291289957410787 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2518971278656802226, guid: adb865d0ae8404d4f9d4d7b566878225, type: 3}
+  m_PrefabInstance: {fileID: 6854921660803962285}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &6724645775110934759
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156291289957410787}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.80235183, y: 0.802352, z: 0.60117}
+  m_Center: {x: 0, y: -0.000000029802322, z: -0.28013209}

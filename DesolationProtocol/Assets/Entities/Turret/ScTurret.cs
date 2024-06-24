@@ -13,6 +13,7 @@ public class ScTurret : MonoBehaviour
     public Transform ShootPoint;
     public LayerMask PerceptibleLayer;
     public bool TurretOn;
+    public AudioManager AudioManager;
 
     public float FireRate;
     private float _counter;
@@ -95,6 +96,7 @@ public class ScTurret : MonoBehaviour
         {
             _counter = 0;
             Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
+            PlaySoundShoot();
         }
     }
 
@@ -123,5 +125,8 @@ public class ScTurret : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(Rotator.position, RangeOfSight);
     }
-
+    public void PlaySoundShoot()
+    {
+        AudioManager.PlaySound("SFX","turret");
+    }
 }

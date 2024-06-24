@@ -16,7 +16,6 @@ public class ScEntityPlayer : ScEntity
     public float airControl = 0.8f;
     public bool landed = true;
     public float experience = 0f;
-    public AudioManager AudioManager;
 
     protected override void Awake()
     {
@@ -25,6 +24,7 @@ public class ScEntityPlayer : ScEntity
         Cursor.lockState = CursorLockMode.Locked;
         _jumps = totaljumps;
         Hud.CountHP();
+        _anim = GetComponentInChildren<Animator>();
     }
 
     protected override void Update()
@@ -91,6 +91,8 @@ public class ScEntityPlayer : ScEntity
     {
         base.TakeDamage(incomingDamage, incomingPenLinear, incomingPenPerc);
         Hud.CountHP();
+        AudioManager.PlaySound("Player", "damage1");
+
     }
 
     public override void Heal(float heal)
@@ -202,6 +204,6 @@ public class ScEntityPlayer : ScEntity
 
     public void PlaySoundFoot()
     {
-        AudioManager.PlaySound("Player","SFX_player","Run");
+        AudioManager.PlaySound("Player","Run");
     }
 }
