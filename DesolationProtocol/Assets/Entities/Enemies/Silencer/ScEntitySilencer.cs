@@ -10,6 +10,12 @@ public class ScEntitySilencer : ScEntityEnemy
     [SerializeField] public float silenceDistance = 40f;
     [SerializeField] private LayerMask layerMask;
 
+
+    protected override void Awake()
+    {
+        base.Awake();
+        _audioSource = GetComponent<AudioSource>();
+    }
     protected override void Update()
     {
         base.Update();
@@ -48,6 +54,7 @@ public class ScEntitySilencer : ScEntityEnemy
     {
         base.Die();
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, silenceDistance, layerMask);
+        _audioSource.Play();
 
         foreach (Collider collider in hitColliders)
         {
