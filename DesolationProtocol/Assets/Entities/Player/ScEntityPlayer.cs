@@ -24,6 +24,7 @@ public class ScEntityPlayer : ScEntity
         Cursor.lockState = CursorLockMode.Locked;
         _jumps = totaljumps;
         Hud.CountHP();
+        _anim = GetComponentInChildren<Animator>();
     }
 
     protected override void Update()
