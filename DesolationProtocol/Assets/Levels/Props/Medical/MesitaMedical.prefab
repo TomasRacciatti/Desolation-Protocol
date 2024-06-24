@@ -54,10 +54,43 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 59acadc65689db245b164a833ec5656f, type: 2}
     - target: {fileID: 919132149155446097, guid: 68644b55a3e0cd74c960aac0b9aeae3e, type: 3}
       propertyPath: m_Name
-      value: Trolley Variant
+      value: MesitaMedical
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 68644b55a3e0cd74c960aac0b9aeae3e, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 68644b55a3e0cd74c960aac0b9aeae3e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9132405155803255236}
   m_SourcePrefab: {fileID: 100100000, guid: 68644b55a3e0cd74c960aac0b9aeae3e, type: 3}
+--- !u!1 &6194151192857405159 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 68644b55a3e0cd74c960aac0b9aeae3e, type: 3}
+  m_PrefabInstance: {fileID: 6428715161768352694}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &9132405155803255236
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6194151192857405159}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.010592409, y: 0.0060445517, z: 0.009137671}
+  m_Center: {x: 0, y: -0.00023032511, z: 0.0045627113}
