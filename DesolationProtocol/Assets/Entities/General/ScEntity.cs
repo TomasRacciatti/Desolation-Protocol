@@ -29,8 +29,6 @@ public class ScEntity : MonoBehaviour
     public UnityEvent OnHeal;
     public UnityEvent OnDeath;
 
-    public AudioManager AudioManager;
-
     protected virtual void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();

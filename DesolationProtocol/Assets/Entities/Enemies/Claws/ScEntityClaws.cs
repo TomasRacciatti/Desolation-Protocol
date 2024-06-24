@@ -7,13 +7,12 @@ public class ScEntityClaws : ScEntityEnemy
 {
     [SerializeField] private bool _playerInAttackRange = false;
     [SerializeField] private GameObject _claws;
-    
+
     protected override void Awake()
     {
         base.Awake();
         KeepTracking();
         _claws.SetActive(false);
-        _audioSource = GetComponent<AudioSource>();
     }
 
     private void TryAttack()
@@ -62,12 +61,5 @@ public class ScEntityClaws : ScEntityEnemy
     public void DeactiveClaws()
     {
         _claws.SetActive(false);
-    }
-
-    public override void TakeDamage(float incomingDamage, float incomingPenLinear = 0, float incomingPenPerc = 0)
-    {
-        base.TakeDamage(incomingDamage, incomingPenLinear, incomingPenPerc);
-        _audioSource.Play();
-
     }
 }

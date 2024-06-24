@@ -34,10 +34,11 @@ public class AudioManager : MonoBehaviour
         
     }
 
-    public void PlaySound(string nameSource,string nameClip)
+    public void PlaySound(string nameSource,string nameGroup,string nameClip)
     {
        
         AudioSource source = SearchSource(nameSource);
+        AudioMixerGroup group = SearchGroup(nameGroup);
         AudioClip clip = SearchAudio(nameClip);
         if (clip != null)
         {

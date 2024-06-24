@@ -687,7 +687,6 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
-  AudioManager: {fileID: 7233962902174478931, guid: 3c69731ca22a1874683f93c14290519e, type: 3}
   _explosionRange: 4
   doRaycast: 1
   FatMutant: {fileID: 5493894508233848889}

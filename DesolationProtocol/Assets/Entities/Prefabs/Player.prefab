@@ -3877,7 +3877,6 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
-  AudioManager: {fileID: 7233962902174478931, guid: 3c69731ca22a1874683f93c14290519e, type: 3}
   FocusRotator: {fileID: 6228538934029001568}
   sens: 1
   Hud: {fileID: 0}
@@ -3886,6 +3885,7 @@ MonoBehaviour:
   airControl: 0.8
   landed: 1
   experience: 0
+  AudioManager: {fileID: 0}
 --- !u!114 &6864857975242942794
 MonoBehaviour:
   m_ObjectHideFlags: 0
