@@ -66,10 +66,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ceee660105d3fc54b954418a605b487a, type: 3}
       propertyPath: m_Name
-      value: Bobine de cuivre Variant
+      value: Cables
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8886209887280210894, guid: ceee660105d3fc54b954418a605b487a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1380727605109765418}
   m_SourcePrefab: {fileID: 100100000, guid: ceee660105d3fc54b954418a605b487a, type: 3}
+--- !u!1 &5703228380052546755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8886209887280210894, guid: ceee660105d3fc54b954418a605b487a, type: 3}
+  m_PrefabInstance: {fileID: 3780709425788208909}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1380727605109765418
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5703228380052546755}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.970484, y: 3.1521251, z: 3.150989}
+  m_Center: {x: 0.3694657, y: 0, z: 0}

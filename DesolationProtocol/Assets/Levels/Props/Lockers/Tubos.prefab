@@ -58,10 +58,39 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d91ade1f3cbd1a0479f3a65801035cf2, type: 2}
     - target: {fileID: 919132149155446097, guid: d753ef73e6edd5742a64a65eb11e01a2, type: 3}
       propertyPath: m_Name
-      value: Pipe Variant
+      value: Tubos
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2975080870277366506, guid: d753ef73e6edd5742a64a65eb11e01a2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4490086897147820236}
   m_SourcePrefab: {fileID: 100100000, guid: d753ef73e6edd5742a64a65eb11e01a2, type: 3}
+--- !u!1 &7411855447449239369 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2975080870277366506, guid: d753ef73e6edd5742a64a65eb11e01a2, type: 3}
+  m_PrefabInstance: {fileID: 5734682164674444707}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &4490086897147820236
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7411855447449239369}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.7620978, y: 1.2938213, z: 2.085528}
+  m_Center: {x: -0.056262076, y: -5.590272, z: -0.0015348792}
