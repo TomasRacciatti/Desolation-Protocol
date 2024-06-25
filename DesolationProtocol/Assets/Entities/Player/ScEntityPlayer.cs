@@ -107,6 +107,7 @@ public class ScEntityPlayer : ScEntity
     protected override void Die()
     {
         base.Die();
+        _anim.SetTrigger("Dead");
         Invoke("OnDeathLoadMainMenu", 5f);
         movement = Vector3.zero;
     }
