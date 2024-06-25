@@ -73,6 +73,7 @@ public class ScWeapon : MonoBehaviour
         shootCd.StartCooldown(shootTime);
         Invoke("TryShoot", shootTime);
         bulletsLeft--;
+        UpdateAmmo();
         
          if (_anim != null)
         {
@@ -118,6 +119,7 @@ public class ScWeapon : MonoBehaviour
         AudioManager.PlaySound("Player", "reload");
 
         Invoke("FinishReload", reloadTime);
+        UpdateAmmo();
     }
 
     private void FinishReload()
@@ -126,5 +128,10 @@ public class ScWeapon : MonoBehaviour
         bulletsLeft = magazineSize;
         _anim.SetBool("F_reload", false);
         _anim.SetInteger("bullets", bulletsLeft);
+    }
+
+    private void UpdateAmmo()
+    {
+        ammoText.text = bulletsLeft.ToString();
     }
 }
