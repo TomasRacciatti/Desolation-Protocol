@@ -12,6 +12,8 @@ public class ScWeapon : MonoBehaviour
     [SerializeField] private bool automatic;
     [SerializeField] private LayerMask layerMask;
 
+    public ParticleSystem muzzleFlash;
+
     //funcionamiento
     private bool shooting , reloading = false;
     public int bulletsLeft;
@@ -38,6 +40,7 @@ public class ScWeapon : MonoBehaviour
         {
 
             Shoot();
+            muzzleFlash.Play();
             AudioManager.PlaySound("Player", "shoot");
 
         }
