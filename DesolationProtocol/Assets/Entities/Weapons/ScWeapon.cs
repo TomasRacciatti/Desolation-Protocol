@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class ScWeapon : MonoBehaviour
 {
     //variables armas
@@ -26,6 +26,7 @@ public class ScWeapon : MonoBehaviour
 
 
     public AudioManager AudioManager;
+    public Text ammoText;
 
     private void Awake()
     {
@@ -34,6 +35,18 @@ public class ScWeapon : MonoBehaviour
         _anim = GetComponent<Animator>();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R) && !reloading && bulletsLeft < magazineSize)
+        {
+            Reload();
+        }
+
+        if (automatic && shooting)
+        {
+            TryShoot();
+        }
+    }
     private void TryShoot()
     {
         if (shootCd.IsReady && shooting && !reloading && bulletsLeft > 0)
@@ -59,7 +72,7 @@ public class ScWeapon : MonoBehaviour
     {
         shootCd.StartCooldown(shootTime);
         Invoke("TryShoot", shootTime);
-        //bulletsLeft--;
+        bulletsLeft--;
         
          if (_anim != null)
         {
@@ -84,6 +97,11 @@ public class ScWeapon : MonoBehaviour
         GameObject currentBullet = Instantiate(bullet, atackPoint.position, Quaternion.LookRotation(targetpoint - atackPoint.position));
         currentBullet.GetComponent<ScProjectile>().owner = this.GetComponent<ScEntity>();
 
+        if (_anim != null)
+        {
+            _anim.SetInteger("bullets", bulletsLeft);
+        }
+
         if (bulletsLeft <= 0)
         {
             Reload();
@@ -93,6 +111,20 @@ public class ScWeapon : MonoBehaviour
 
     public void Reload()
     {
+        if (reloading) return;
+
+        reloading = true;
+        _anim.SetBool("F_reload", true);
+        AudioManager.PlaySound("Player", "reload");
+
+        Invoke("FinishReload", reloadTime);
+    }
+
+    private void FinishReload()
+    {
+        reloading = false;
         bulletsLeft = magazineSize;
+        _anim.SetBool("F_reload", false);
+        _anim.SetInteger("bullets", bulletsLeft);
     }
 }

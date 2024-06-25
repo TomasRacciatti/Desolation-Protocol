@@ -54,10 +54,10 @@ public class ScWaves : MonoBehaviour
 
         NavMeshHit hit;
 
-        // Intentar encontrar una posición válida dentro del NavMesh
+        // Intentar encontrar una posicion valida dentro del NavMesh
         if (NavMesh.SamplePosition(Place, out hit, 100, NavMesh.AllAreas))
         {
-            // Instanciar el prefab en la posición encontrada
+            // Instanciar el prefab en la posicion encontrada
             GameObject SpawnedEnemy = Instantiate(Enemies[Class], hit.position, Quaternion.identity);
             //SpawnedEnemy.GetComponent<ScEntity>().level = ActualWave;
         }

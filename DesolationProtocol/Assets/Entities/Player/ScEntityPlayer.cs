@@ -57,7 +57,7 @@ public class ScEntityPlayer : ScEntity
                 }
                 else
                 {
-                    //_rigidbody.velocity = _rigidbody.velocity.normalized * Stats.movementSpeed;
+                    _rigidbody.velocity = _rigidbody.velocity.normalized * Stats.movementSpeed;
                 }
             }
             else
@@ -65,7 +65,10 @@ public class ScEntityPlayer : ScEntity
                 //_rigidbody.velocity = new Vector3(_rigidbody.velocity.x * 0.95f, _rigidbody.velocity.y, _rigidbody.velocity.z * 0.95f);
             }
         }
-        //(Quaternion.LookRotation(_rigidbody.transform.forward, _rigidbody.transform.up) * _rigidbody.velocity).normalized.x
+        //(Quaternion.LookRotation(_rigidbody.transform.forward, _rigidbody.transform.up) * _rigidbody.velocity).normalized.x;
+
+        bool isMoving = _rigidbody.velocity.magnitude > 0.1f;
+        _anim.SetBool("IsMoving", isMoving);
 
         _anim.SetFloat("XAxis", movement.x, 0.1f, Time.deltaTime);
         _anim.SetFloat("ZAxis", movement.z, 0.1f, Time.deltaTime);
@@ -74,7 +77,7 @@ public class ScEntityPlayer : ScEntity
 
     public void OnLand()
     {
-        _anim.SetTrigger("Land");
+        _anim.SetTrigger("Landed");
         _jumps = totaljumps;
         landed = true;
         _anim.SetBool("Landed", landed);
