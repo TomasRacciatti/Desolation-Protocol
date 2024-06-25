@@ -6,13 +6,29 @@ using UnityEngine.UI;
 
 public class VolumeSettings : MonoBehaviour
 {
+
     [SerializeField] private AudioMixer audioMixer;
     [SerializeField] private Slider master;
     [SerializeField] private Slider music;
     [SerializeField] private Slider sfx;
     [SerializeField] private Slider player;
 
+    /*[SerializeField] private float masterVol;
+    [SerializeField] private float musicVol;
+    [SerializeField] private float SFXVol;
+    [SerializeField] private float playerVol;
 
+
+    private void Start()
+    {
+        masterVol = PlayerPrefs.GetFloat("master");
+        master.value = masterVol;
+    }
+
+    private void Update()
+    {
+        PlayerPrefs.SetFloat("master",masterVol);
+    }*/
 
     public void SetMasterVolume()
     {
