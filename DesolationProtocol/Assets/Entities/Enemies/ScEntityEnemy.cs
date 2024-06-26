@@ -37,7 +37,8 @@ public class ScEntityEnemy : ScEntity
     {
         base.Die();
         StopTracking();
-        Destroy(gameObject, 5);
+        Destroy(_agent);
+        Destroy(gameObject, 3);
     }
 
     protected void KeepTracking()
