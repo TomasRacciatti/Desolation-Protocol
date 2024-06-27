@@ -31,6 +31,13 @@ public class ScEntity : MonoBehaviour
 
     public AudioManager AudioManager;
 
+    [Header("Step Climb")]
+    
+    [SerializeField] private GameObject stepRayUpper;
+    [SerializeField] private GameObject stepRayLower;
+    [SerializeField] private float stepHeight = 0.3f;
+    [SerializeField] private float stepSmooth = 0.1f;
+
     protected virtual void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -62,6 +69,8 @@ public class ScEntity : MonoBehaviour
     {
         //Regen
         if (0 < health && health < Stats.maxHealth && Stats.regeneration != 0) Heal(Stats.regeneration * Time.fixedDeltaTime);
+
+        StepClimb();
     }
 
     //Health
@@ -127,4 +136,38 @@ public class ScEntity : MonoBehaviour
             print("Silenciado");
         }
     }
+
+    private void StepClimb()
+    {
+        RaycastHit hitLower;
+        if (Physics.Raycast(stepRayLower.transform.position, transform.TransformDirection(Vector3.forward), out hitLower, 0.1f))
+        {
+            RaycastHit hitUpper;
+            if (!Physics.Raycast(stepRayUpper.transform.position, transform.TransformDirection(Vector3.forward), out hitUpper, 0.2f))
+            {
+                _rigidbody.position -= new Vector3(0f, -stepSmooth, 0f);
+            }
+        }
+
+        RaycastHit hitLower45;
+        if (Physics.Raycast(stepRayLower.transform.position, transform.TransformDirection(1.5f, 0, 1), out hitLower45, 0.1f))
+        {
+            RaycastHit hitUpper45;
+            if (!Physics.Raycast(stepRayUpper.transform.position, transform.TransformDirection(1.5f, 0, 1), out hitUpper45, 0.2f))
+            {
+                _rigidbody.position -= new Vector3(0f, -stepSmooth, 0f);
+            }
+        }
+
+        RaycastHit hitLowerMinus45;
+        if (Physics.Raycast(stepRayLower.transform.position, transform.TransformDirection(-1.5f, 0, 1), out hitLowerMinus45, 0.1f))
+        {
+            RaycastHit hitUpperMinus45;
+            if (!Physics.Raycast(stepRayUpper.transform.position, transform.TransformDirection(-1.5f, 0, 1), out hitUpperMinus45, 0.2f))
+            {
+                _rigidbody.position -= new Vector3(0f, -stepSmooth, 0f);
+            }
+        }
+    }
+
 }

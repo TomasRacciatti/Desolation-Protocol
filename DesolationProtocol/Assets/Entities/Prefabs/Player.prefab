@@ -5987,6 +5987,8 @@ Transform:
   - {fileID: 3575434588434653145}
   - {fileID: 4420172905064101519}
   - {fileID: 4622941783646658466}
+  - {fileID: 8275353816226710930}
+  - {fileID: 1186576770282631435}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8359180947753815258
@@ -6032,6 +6034,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   AudioManager: {fileID: 0}
+  stepRayUpper: {fileID: 7838805925526328510}
+  stepRayLower: {fileID: 8257461956085543429}
+  stepHeight: 0.3
+  stepSmooth: 0.1
   FocusRotator: {fileID: 6228538934029001568}
   sens: 1
   Hud: {fileID: 0}
@@ -6326,6 +6332,7 @@ MonoBehaviour:
   fpsCam: {fileID: 4847919556903865731}
   atackPoint: {fileID: 9113156039403081901}
   AudioManager: {fileID: 0}
+  ammoText: {fileID: 0}
 --- !u!1 &4331444750850837048
 GameObject:
   m_ObjectHideFlags: 0
@@ -7380,6 +7387,37 @@ Transform:
   - {fileID: 4224774890657998012}
   m_Father: {fileID: 7260404020704352825}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7838805925526328510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1186576770282631435}
+  m_Layer: 7
+  m_Name: stepRayUpper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1186576770282631435
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7838805925526328510}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.329, z: 0.182}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7404114911571605632}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8038139566522142147
 GameObject:
   m_ObjectHideFlags: 0
@@ -7474,6 +7512,37 @@ Transform:
   m_Children:
   - {fileID: 5377440876011617493}
   m_Father: {fileID: 7199149020355900717}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8257461956085543429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8275353816226710930}
+  m_Layer: 7
+  m_Name: stepRayLower
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8275353816226710930
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8257461956085543429}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0478, z: 0.182}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7404114911571605632}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8400112950087253798
 GameObject:
