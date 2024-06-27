@@ -31,13 +31,6 @@ public class ScEntity : MonoBehaviour
 
     public AudioManager AudioManager;
 
-    [Header("Step Climb")]
-    
-    [SerializeField] protected GameObject stepRayUpper;
-    [SerializeField] protected GameObject stepRayLower;
-    [SerializeField] protected float stepHeight = 0.3f;
-    [SerializeField] protected float stepSmooth = 0.1f;
-
     protected virtual void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -70,7 +63,7 @@ public class ScEntity : MonoBehaviour
         //Regen
         if (0 < health && health < Stats.maxHealth && Stats.regeneration != 0) Heal(Stats.regeneration * Time.fixedDeltaTime);
 
-        StepClimb();
+        //StepClimb();
     }
 
     //Health
@@ -137,6 +130,9 @@ public class ScEntity : MonoBehaviour
         }
     }
 
+    /*  
+    // NAVMESH MODIFICADO Y AHORA NO ES NECESARIO QUE LOS ENEMIGOS ACCEDAN A ESTO. MOVIDO A ScEntityPlayer
+     
     protected virtual void StepClimb()
     {
         RaycastHit hitLower;
@@ -169,5 +165,5 @@ public class ScEntity : MonoBehaviour
             }
         }
     }
-
+    */
 }

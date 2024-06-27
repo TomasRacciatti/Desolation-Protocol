@@ -17,6 +17,13 @@ public class ScEntityPlayer : ScEntity
     public bool landed = true;
     public float experience = 0f;
 
+    [Header("Step Climb")]
+
+    [SerializeField] protected GameObject stepRayUpper;
+    [SerializeField] protected GameObject stepRayLower;
+    [SerializeField] protected float stepHeight = 0.3f;
+    [SerializeField] protected float stepSmooth = 0.1f;
+
     protected override void Awake()
     {
         base.Awake();
@@ -72,6 +79,8 @@ public class ScEntityPlayer : ScEntity
 
         _anim.SetFloat("XAxis", movement.x, 0.1f, Time.deltaTime);
         _anim.SetFloat("ZAxis", movement.z, 0.1f, Time.deltaTime);
+
+        StepClimb();
     }
 
 
@@ -209,5 +218,38 @@ public class ScEntityPlayer : ScEntity
     public void PlaySoundFoot()
     {
         AudioManager.PlaySound("Player","Run");
+    }
+
+    private void StepClimb()
+    {
+        RaycastHit hitLower;
+        if (Physics.Raycast(stepRayLower.transform.position, transform.TransformDirection(Vector3.forward), out hitLower, 0.1f))
+        {
+            RaycastHit hitUpper;
+            if (!Physics.Raycast(stepRayUpper.transform.position, transform.TransformDirection(Vector3.forward), out hitUpper, 0.2f))
+            {
+                _rigidbody.position -= new Vector3(0f, -stepSmooth, 0f);
+            }
+        }
+
+        RaycastHit hitLower45;
+        if (Physics.Raycast(stepRayLower.transform.position, transform.TransformDirection(1.5f, 0, 1), out hitLower45, 0.1f))
+        {
+            RaycastHit hitUpper45;
+            if (!Physics.Raycast(stepRayUpper.transform.position, transform.TransformDirection(1.5f, 0, 1), out hitUpper45, 0.2f))
+            {
+                _rigidbody.position -= new Vector3(0f, -stepSmooth, 0f);
+            }
+        }
+
+        RaycastHit hitLowerMinus45;
+        if (Physics.Raycast(stepRayLower.transform.position, transform.TransformDirection(-1.5f, 0, 1), out hitLowerMinus45, 0.1f))
+        {
+            RaycastHit hitUpperMinus45;
+            if (!Physics.Raycast(stepRayUpper.transform.position, transform.TransformDirection(-1.5f, 0, 1), out hitUpperMinus45, 0.2f))
+            {
+                _rigidbody.position -= new Vector3(0f, -stepSmooth, 0f);
+            }
+        }
     }
 }

@@ -67,6 +67,10 @@ public class ScEntityEnemy : ScEntity
         }
     }
 
+    /*
+    // NAVMESH MODIFICADO PARA QUE NO HAGA FALTA HACER ESTO POR CODIGO
+
+     
     protected override void StepClimb()
     {
         RaycastHit hitLower;
@@ -106,5 +110,5 @@ public class ScEntityEnemy : ScEntity
         _rigidbody.position += adjustment;
         _agent.nextPosition = _rigidbody.position;
         _agent.updatePosition = true;
-    }
+    }*/
 }
