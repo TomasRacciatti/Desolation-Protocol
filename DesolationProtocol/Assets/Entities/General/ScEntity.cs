@@ -33,10 +33,10 @@ public class ScEntity : MonoBehaviour
 
     [Header("Step Climb")]
     
-    [SerializeField] private GameObject stepRayUpper;
-    [SerializeField] private GameObject stepRayLower;
-    [SerializeField] private float stepHeight = 0.3f;
-    [SerializeField] private float stepSmooth = 0.1f;
+    [SerializeField] protected GameObject stepRayUpper;
+    [SerializeField] protected GameObject stepRayLower;
+    [SerializeField] protected float stepHeight = 0.3f;
+    [SerializeField] protected float stepSmooth = 0.1f;
 
     protected virtual void Awake()
     {
@@ -137,7 +137,7 @@ public class ScEntity : MonoBehaviour
         }
     }
 
-    private void StepClimb()
+    protected virtual void StepClimb()
     {
         RaycastHit hitLower;
         if (Physics.Raycast(stepRayLower.transform.position, transform.TransformDirection(Vector3.forward), out hitLower, 0.1f))
