@@ -11,14 +11,14 @@ public class ScHud : MonoBehaviour
     [SerializeField] private Slider HpBar;
     [SerializeField] private Text Wave_text;
 
-    public int contador = 300;
+    public int timer = 300;
 
     private void Start()
     {
         Time.timeScale = 1.0f;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        Invoke("Contador",1);
+        Invoke("Countdown",1);
 
     }
 
@@ -58,18 +58,18 @@ public class ScHud : MonoBehaviour
         HpBar.value = _entity.health / _entity.Stats.maxHealth;
     }
 
-    public void Contador()
+    public void Countdown()
     {
-        contador--;
-        Wave_text.text = "La ayuda llegara en " + contador + " segundos"; 
+        timer--;
+        Wave_text.text = "Help is comming!\nETA " + timer + " seconds"; 
         
-        if (contador <= 0)
+        if (timer <= 0)
         {
             //manda al pibe a una pantalla de victoria
         }
         else
         {
-            Invoke("Contador",1);    
+            Invoke("Countdown",1);    
         }
     }
 }
