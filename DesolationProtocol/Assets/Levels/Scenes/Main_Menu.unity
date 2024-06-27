@@ -245,7 +245,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &88099069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -637,19 +637,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Move
+  m_text: 'WASD
 
-    Jump
+    Space
 
-    shift
+    Shift
 
     e
 
     Left click
 
     Right Click
-
-    Shift
 
     H
 
@@ -680,8 +678,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55
-  m_fontSizeBase: 55
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -2094,7 +2092,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &915115153
 Transform:
   m_ObjectHideFlags: 0
@@ -3733,7 +3731,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "WASD: \nSpace: \nSprint: \nInteract:\nShoot:\nAim:\nDash:\nHeal:\nTeleport"
+  m_text: "Move:\nJump:\nDash: \nInteract:\nShoot:\nAim:\nHeal:\nTeleport:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0054971aab99cac48b253303f574de1a, type: 2}
   m_sharedMaterial: {fileID: 4000772350058588808, guid: 0054971aab99cac48b253303f574de1a, type: 2}
@@ -3760,8 +3758,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55
-  m_fontSizeBase: 55
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
