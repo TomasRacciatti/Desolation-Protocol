@@ -690,10 +690,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   AudioManager: {fileID: 7233962902174478931, guid: 3c69731ca22a1874683f93c14290519e, type: 3}
-  stepRayUpper: {fileID: 3953335533485689748}
-  stepRayLower: {fileID: 4271970055169064103}
-  stepHeight: 0.3
-  stepSmooth: 0.1
   _explosionRange: 4
   doRaycast: 1
   FatMutant: {fileID: 5493894508233848889}
@@ -809,7 +805,7 @@ AudioSource:
   m_GameObject: {fileID: 3746106336242127684}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8025806236215250981, guid: d1e2fe4dac4cdba4a846a056c2a1bede, type: 2}
   m_audioClip: {fileID: 8300000, guid: 23d5a737a42ace2458330f61c444330c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.54

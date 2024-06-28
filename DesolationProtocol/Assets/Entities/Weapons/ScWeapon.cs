@@ -54,7 +54,7 @@ public class ScWeapon : MonoBehaviour
 
             Shoot();
             muzzleFlash.Play();
-            AudioManager.PlaySound("Player", "shoot");
+            AudioManager.PlaySound("SFX", "shoot");
 
         }
     }

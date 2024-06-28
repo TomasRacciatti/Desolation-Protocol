@@ -103,7 +103,7 @@ public class ScEntityPlayer : ScEntity
     {
         base.TakeDamage(incomingDamage, incomingPenLinear, incomingPenPerc);
         Hud.CountHP();
-        AudioManager.PlaySound("Player", "damage1");
+        AudioManager.PlaySound("SFX", "damage1");
 
     }
 
@@ -217,7 +217,7 @@ public class ScEntityPlayer : ScEntity
 
     public void PlaySoundFoot()
     {
-        AudioManager.PlaySound("Player","Run");
+        AudioManager.PlaySound("SFX","Run");
     }
 
     private void StepClimb()
