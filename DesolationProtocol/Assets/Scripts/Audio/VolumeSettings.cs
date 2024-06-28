@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class VolumeSettings : MonoBehaviour
@@ -17,21 +18,32 @@ public class VolumeSettings : MonoBehaviour
     {
         float volumeMa = master.value;
         audioMixer.SetFloat("Master", volumeMa);
-        //PlayerPrefs.SetFloat("MasterVolume", volumeMa);
     }
 
     public void SetMusicVolume()
     {
         float volumeMu = music.value;
         audioMixer.SetFloat("Music", volumeMu);
-        //PlayerPrefs.SetFloat("MusicVolume", volumeMu);
     }
 
     public void SetSFXVolume()
     {
         float volumeS = sfx.value;
         audioMixer.SetFloat("SFX", volumeS);
-        //PlayerPrefs.SetFloat("SFXVolume", volumeS);
     }
 
+    public void UpdateSliders()
+    {
+        float MasterV;
+        audioMixer.GetFloat("Master", out MasterV);
+        master.value = MasterV;
+
+        float musicV;
+        audioMixer.GetFloat("Music", out musicV);
+        master.value = musicV;
+
+        float sfxV;
+        audioMixer.GetFloat("SFX", out sfxV);
+        master.value = sfxV;
+    }
 }
