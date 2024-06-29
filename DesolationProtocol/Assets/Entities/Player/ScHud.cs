@@ -13,6 +13,8 @@ public class ScHud : MonoBehaviour
 
     public int timer = 300;
 
+    [SerializeField] private GameObject silencedHud;
+
     private void Start()
     {
         Time.timeScale = 1.0f;
@@ -72,4 +74,17 @@ public class ScHud : MonoBehaviour
             Invoke("Countdown",1);    
         }
     }
+
+    public void Silencers(bool isSilenced)
+    {   
+        if (isSilenced)
+        {
+            silencedHud.SetActive(true);
+        }
+        else
+        {
+            silencedHud.SetActive(false);
+        }
+    }
+
 }

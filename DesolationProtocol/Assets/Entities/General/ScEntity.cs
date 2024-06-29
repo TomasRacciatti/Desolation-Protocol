@@ -127,8 +127,22 @@ public class ScEntity : MonoBehaviour
         else
         {
             print("Silenciado");
+            AudioManager.PlaySound("SFX","shh");
         }
     }
+
+    public virtual void Silenced(bool action)
+    {
+        if (action)
+        {
+            silencers++;
+        }
+        else 
+        { 
+            silencers--;
+        }
+    }
+
 
     /*  
     // NAVMESH MODIFICADO Y AHORA NO ES NECESARIO QUE LOS ENEMIGOS ACCEDAN A ESTO. MOVIDO A ScEntityPlayer

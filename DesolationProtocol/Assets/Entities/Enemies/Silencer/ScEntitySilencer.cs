@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static System.Collections.Specialized.BitVector32;
 using static UnityEngine.EventSystems.EventTrigger;
 
 public class ScEntitySilencer : ScEntityEnemy
@@ -37,15 +38,8 @@ public class ScEntitySilencer : ScEntityEnemy
         {
             ScEntity otherEntity = other.GetComponent<ScEntity>();
             if (otherEntity && Team != otherEntity.Team)
-            {
-                if (action)
-                {
-                    otherEntity.silencers++;
-                }
-                else
-                {
-                    otherEntity.silencers--;
-                }
+            {             
+                otherEntity.Silenced(action);
             }
         }
     }
@@ -61,7 +55,7 @@ public class ScEntitySilencer : ScEntityEnemy
             ScEntity otherEntity = collider.GetComponent<ScEntity>();
             if (otherEntity && Team != otherEntity.Team)
             {
-                otherEntity.silencers--;
+                otherEntity.Silenced(false);
             }
         }
     }

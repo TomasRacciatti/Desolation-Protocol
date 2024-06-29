@@ -217,7 +217,7 @@ public class ScEntityPlayer : ScEntity
 
     public void PlaySoundFoot()
     {
-        AudioManager.PlaySound("SFX","Run");
+        AudioManager.PlaySound("SFX", "Run");
     }
 
     private void StepClimb()
@@ -251,5 +251,11 @@ public class ScEntityPlayer : ScEntity
                 _rigidbody.position -= new Vector3(0f, -stepSmooth, 0f);
             }
         }
+    }
+
+    public override void Silenced(bool action)
+    {
+        base.Silenced(action);
+        Hud.Silencers(silencers != 0);
     }
 }
