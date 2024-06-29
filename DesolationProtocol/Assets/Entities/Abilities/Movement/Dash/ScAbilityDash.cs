@@ -10,6 +10,16 @@ public class ScAbilityDash : ScAbility
     [SerializeField] private float strength;
     [SerializeField] private float duration;
     [SerializeField] private AnimationCurve timeline;
+
+    public override void Try(ScEntity entity)
+    {
+        ScEntityPlayer player = entity.GetComponent<ScEntityPlayer>();
+
+        if (player && player.movement != Vector3.zero)
+        {
+            base.Try(entity);
+        }
+    }
     protected override void Activate(ScEntity entity)
     {
         base.Activate(entity);
