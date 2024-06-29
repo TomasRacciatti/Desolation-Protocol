@@ -172,7 +172,7 @@ public class ScEntityPlayer : ScEntity
 
     public void Shoot(InputAction.CallbackContext CallbackContext)
     {
-        if (CallbackContext.performed && health > 0)
+        if (CallbackContext.performed && health > 0 && Time.timeScale != 0)
         {
             GetComponent<ScWeapon>().SetShooting(true);
         }
