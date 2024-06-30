@@ -115,10 +115,11 @@ public class ScWeapon : MonoBehaviour
 
         reloading = true;
         _anim.SetBool("F_reload", true);
-        AudioManager.PlaySound("Player", "reload");
+        AudioManager.PlaySound("SFX", "reload");
 
         Invoke("FinishReload", reloadTime);
-        UpdateAmmo();
+        Invoke("UpdateAmmo", reloadTime);
+        //UpdateAmmo();
     }
 
     private void FinishReload()
