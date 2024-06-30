@@ -12,6 +12,8 @@ public class ScWeapon : MonoBehaviour
     [SerializeField] private bool automatic;
     [SerializeField] private LayerMask layerMask;
 
+    [SerializeField] private Image _ammoUI;
+
     public ParticleSystem muzzleFlash;
 
     //funcionamiento
@@ -137,6 +139,6 @@ public class ScWeapon : MonoBehaviour
 
     private void UpdateAmmo()
     {
-        ammoText.text = bulletsLeft.ToString();
+        _ammoUI.fillAmount = (float)bulletsLeft / magazineSize;
     }
 }
