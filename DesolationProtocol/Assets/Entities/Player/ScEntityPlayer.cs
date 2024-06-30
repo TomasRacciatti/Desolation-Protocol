@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -37,10 +38,15 @@ public class ScEntityPlayer : ScEntity
 
     protected override void Update()
     {
-        if (health > 0)
+        if (health > 0)// && Time.timeScale != 0)
         {
             _rigidbody.transform.Rotate(Vector3.up, Input.GetAxis("MouseX") * sens, Space.World);
-            FocusRotator.Rotate(FocusRotator.right, Mathf.Clamp(-1 * Input.GetAxis("MouseY") * sens, -90, 90), Space.World);
+            //FocusRotator.Rotate(FocusRotator.right, Mathf.Clamp(-1 * Input.GetAxis("MouseY") * sens, -90, 90), Space.World);
+            float rotationAmount = -1 * Input.GetAxis("MouseY");
+            Vector3 currentRotation = FocusRotator.eulerAngles;
+            float clampedRotationX = currentRotation.x > 180 ? currentRotation.x - 360 : currentRotation.x;
+            clampedRotationX = Mathf.Clamp(clampedRotationX + rotationAmount, -45, 45);
+            FocusRotator.eulerAngles = new Vector3(clampedRotationX, currentRotation.y, currentRotation.z);
         }
     }
 
