@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -55,11 +56,13 @@ public class ScEntityPlayer : ScEntity
                 {
                     if (landed)
                     {
-                        _rigidbody.AddForce(Quaternion.LookRotation(_rigidbody.transform.forward, _rigidbody.transform.up) * movement * Stats.movementSpeed * 100, ForceMode.Acceleration);
+                        //_rigidbody.AddForce(Quaternion.LookRotation(_rigidbody.transform.forward, _rigidbody.transform.up) * movement * Stats.movementSpeed * Time.fixedDeltaTime, ForceMode.VelocityChange);
+                        _rigidbody.velocity = Quaternion.LookRotation(_rigidbody.transform.forward, _rigidbody.transform.up) * movement * Stats.movementSpeed + new Vector3(0, _rigidbody.velocity.y, 0);
                     }
                     else
                     {
-                        _rigidbody.AddForce(Quaternion.LookRotation(_rigidbody.transform.forward, _rigidbody.transform.up) * movement * Stats.movementSpeed * 100 * airControl, ForceMode.Acceleration);
+                        //_rigidbody.AddForce(Quaternion.LookRotation(_rigidbody.transform.forward, _rigidbody.transform.up) * movement * Stats.movementSpeed * Time.fixedDeltaTime * airControl, ForceMode.VelocityChange);
+                        _rigidbody.velocity = Quaternion.LookRotation(_rigidbody.transform.forward, _rigidbody.transform.up) * movement * Stats.movementSpeed * airControl + new Vector3(0, _rigidbody.velocity.y, 0);
                     }
                 }
                 else
@@ -69,6 +72,7 @@ public class ScEntityPlayer : ScEntity
             }
             else
             {
+                _rigidbody.velocity = Quaternion.LookRotation(_rigidbody.transform.forward, _rigidbody.transform.up) * movement * Stats.movementSpeed + new Vector3(0, _rigidbody.velocity.y, 0);
                 //_rigidbody.velocity = new Vector3(_rigidbody.velocity.x * 0.95f, _rigidbody.velocity.y, _rigidbody.velocity.z * 0.95f);
             }
         }
