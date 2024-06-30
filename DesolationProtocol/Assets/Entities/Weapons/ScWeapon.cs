@@ -127,6 +127,11 @@ public class ScWeapon : MonoBehaviour
         bulletsLeft = magazineSize;
         _anim.SetBool("F_reload", false);
         _anim.SetInteger("bullets", bulletsLeft);
+
+        if (shooting)
+        {
+            TryShoot();
+        }
     }
 
     private void UpdateAmmo()
