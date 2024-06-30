@@ -96,7 +96,7 @@ public class ScWeapon : MonoBehaviour
 
         Debug.DrawRay(targetpoint, targetpoint - atackPoint.position);
         GameObject currentBullet = Instantiate(bullet, atackPoint.position, Quaternion.LookRotation(targetpoint - atackPoint.position));
-        currentBullet.GetComponent<ScProjectile>().owner = this.GetComponent<ScEntity>();
+        currentBullet.GetComponent<ScProjectile>().owner = GetComponent<ScEntity>();
 
         if (_anim != null)
         {
@@ -106,7 +106,6 @@ public class ScWeapon : MonoBehaviour
         if (bulletsLeft <= 0)
         {
             Reload();
-            Invoke("Reload", reloadTime);
         }
     }
 
