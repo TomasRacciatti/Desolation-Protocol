@@ -23,7 +23,7 @@ public class AudioManager : MonoBehaviour
     }
     public void Start()
     {
-        PlaySound("Music", "ambiente2");
+        //PlaySound("Music", "ambiente2");
     }
 
     public void PlaySound(string nameSource,string nameClip)
