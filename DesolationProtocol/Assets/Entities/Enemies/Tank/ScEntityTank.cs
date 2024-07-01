@@ -11,8 +11,9 @@ public class ScEntityTank : ScEntityEnemy
 
     }
 
-    private void Start()
+    public override void Start()
     {
+        base.Start();
         KeepTracking();
     }
 
@@ -21,7 +22,7 @@ public class ScEntityTank : ScEntityEnemy
         base.Update();
         if (_active && !_isDead)
         {
-            if (Vector3.Distance(_target.position, transform.position) < 3)
+            if (Vector3.Distance(_target.position, transform.position) < 1.8f)
             {
                 
                 _anim.SetBool("InRange", true);

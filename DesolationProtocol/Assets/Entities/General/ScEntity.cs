@@ -39,6 +39,11 @@ public class ScEntity : MonoBehaviour
                 //abilities[i].cooldown.ResetCooldown();
             }
         }
+        
+    }
+
+    public virtual void Start()
+    {
         SetStats();
         health = Stats.maxHealth;
     }
