@@ -14,6 +14,8 @@ public class ScWinTrigger : MonoBehaviour
         if (win.timer <= 0)
         {
             SceneManager.LoadScene("VictoryScreen");
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Confined;
         }
     }
 }

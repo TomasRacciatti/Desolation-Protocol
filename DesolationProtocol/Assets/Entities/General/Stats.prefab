@@ -50,7 +50,7 @@ MonoBehaviour:
       maxHealth: 100
       regeneration: 0
       armor: 25
-      damage: 100
+      damage: 5
       attackSpeed: 0.5
       movementSpeed: 3
       jumpForce: 1
@@ -70,7 +70,7 @@ MonoBehaviour:
       cooldowns: 0.01
   - title: Claws
     statsBase:
-      maxHealth: 100
+      maxHealth: 15
       regeneration: 0
       armor: 0
       damage: 10
@@ -93,7 +93,7 @@ MonoBehaviour:
       cooldowns: 0.01
   - title: Tank
     statsBase:
-      maxHealth: 200
+      maxHealth: 20
       regeneration: 0
       armor: 100
       damage: 5
@@ -139,7 +139,7 @@ MonoBehaviour:
       cooldowns: 0.01
   - title: Silencer
     statsBase:
-      maxHealth: 100
+      maxHealth: 10
       regeneration: 0
       armor: 25
       damage: 0
