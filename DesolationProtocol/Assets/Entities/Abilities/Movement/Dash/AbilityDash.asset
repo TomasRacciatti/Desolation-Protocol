@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Dash
   icon: {fileID: 0}
-  cooldownTime: 1
+  cooldownTime: 5
   maxCharges: 3
-  strength: 4000
+  strength: 3000
   duration: 0.3
   timeline:
     serializedVersion: 2

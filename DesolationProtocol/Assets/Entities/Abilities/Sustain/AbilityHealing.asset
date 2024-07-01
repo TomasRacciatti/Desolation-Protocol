@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Healing
   icon: {fileID: 0}
-  cooldownTime: 30
+  cooldownTime: 15
   maxCharges: 2
-  percent: 0.3
+  percent: 0.4
   duration: 1
