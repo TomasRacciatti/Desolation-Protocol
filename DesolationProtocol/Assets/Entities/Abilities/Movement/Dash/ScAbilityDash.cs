@@ -41,7 +41,7 @@ public class ScAbilityDash : ScAbility
             direction = _rigidbody.transform.forward;
         }
         float timer = 0f;
-        while (timer < duration)
+        while (timer < duration && _rigidbody)
         {
             _rigidbody.velocity = new Vector3(_rigidbody.velocity.x, 0, _rigidbody.velocity.z);
             _rigidbody.AddForce(direction * strength * timeline.Evaluate(timer), ForceMode.Impulse);

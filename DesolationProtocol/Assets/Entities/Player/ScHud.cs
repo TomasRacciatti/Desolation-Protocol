@@ -62,14 +62,13 @@ public class ScHud : MonoBehaviour
     public void Countdown()
     {
         timer--;
-        Wave_text.text = "Help is comming!\nETA " + timer + " seconds"; 
-        
         if (timer <= 0)
         {
             Wave_text.text = "The help has arrived!\nGo outside to escape";
         }
         else
         {
+            Wave_text.text = "Help is comming!\nETA " + timer + " seconds";
             Invoke("Countdown",1);    
         }
     }
