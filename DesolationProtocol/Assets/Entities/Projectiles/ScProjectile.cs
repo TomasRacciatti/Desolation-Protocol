@@ -18,8 +18,20 @@ public class ScProjectile : MonoBehaviour
         Destroy(gameObject, 5f);
     }
 
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Default"))
+        {
+            Destroy(gameObject);
+        }
+
+    }
+
+
     private void OnTriggerEnter(Collider other)
     {
+        
         if (other.gameObject.TryGetComponent<ScEntity>(out ScEntity otherEntity))
         {
             if (owner != null)
