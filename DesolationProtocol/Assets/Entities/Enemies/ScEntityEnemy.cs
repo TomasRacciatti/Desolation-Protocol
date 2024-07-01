@@ -18,8 +18,9 @@ public class ScEntityEnemy : ScEntity
         _target = FindObjectOfType<ScEntityPlayer>().transform;
     }
 
-    private void Start()
+    public override void Start()
     {
+        base.Start();
         _agent.speed = Stats.movementSpeed;
     }
 
