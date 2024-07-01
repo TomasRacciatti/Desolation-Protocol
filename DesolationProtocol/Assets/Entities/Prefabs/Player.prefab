@@ -6024,15 +6024,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 871e927dee001ca4d954d991756f5e02, type: 2}
   - {fileID: 11400000, guid: 0e6d3b7e726d5b247ad9a055a8bbe909, type: 2}
   silencers: 0
-  OnTakingDmg:
-    m_PersistentCalls:
-      m_Calls: []
-  OnHeal:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
   AudioManager: {fileID: 0}
   FocusRotator: {fileID: 6228538934029001568}
   sens: 1
@@ -6303,7 +6294,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.21936226
+  m_Radius: 0.4
   m_Height: 1.8086834
   m_Direction: 1
   m_Center: {x: 0, y: 0.890255, z: 0}
@@ -6327,6 +6318,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 256
+  _ammoUI: {fileID: 0}
   muzzleFlash: {fileID: 2520206374062803668}
   bulletsLeft: 0
   fpsCam: {fileID: 4847919556903865731}

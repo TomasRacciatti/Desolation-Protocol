@@ -38,7 +38,7 @@ public class ScEntityPlayer : ScEntity
 
     protected override void Update()
     {
-        if (health > 0)// && Time.timeScale != 0)
+        if (health > 0 && Time.timeScale != 0)
         {
             _rigidbody.transform.Rotate(Vector3.up, Input.GetAxis("MouseX") * sens, Space.World);
             //FocusRotator.Rotate(FocusRotator.right, Mathf.Clamp(-1 * Input.GetAxis("MouseY") * sens, -90, 90), Space.World);
