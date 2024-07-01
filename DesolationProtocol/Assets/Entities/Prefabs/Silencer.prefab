@@ -138,7 +138,6 @@ GameObject:
   - component: {fileID: 220700386132721979}
   - component: {fileID: 6192512161680874305}
   - component: {fileID: 2995628397813824851}
-  - component: {fileID: 7634127929778258206}
   - component: {fileID: 4528735540242238148}
   - component: {fileID: 3320685571366659027}
   - component: {fileID: 1159484704257165620}
@@ -236,46 +235,6 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 384
---- !u!114 &7634127929778258206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 602292096242277249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bdc23ee78b56fd48b3522d3ac66f755, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  linkStats: {fileID: 6760126694860531315, guid: 2aedf3eea69180749acbc1dac76bf6ca, type: 3}
-  entityName: Silencer
-  Team: Enemy
-  Stats:
-    maxHealth: 100
-    regeneration: 0
-    armor: 10
-    damage: 10
-    attackSpeed: 1
-    movementSpeed: 1
-    jumpForce: 1
-    critPercent: 1
-    critMultiplier: 1.2
-    cooldowns: 1
-  health: 100
-  level: 0
-  abilities: []
-  silencers: 0
-  OnTakingDmg:
-    m_PersistentCalls:
-      m_Calls: []
-  OnHeal:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
-  AudioManager: {fileID: 0}
 --- !u!195 &4528735540242238148
 NavMeshAgent:
   m_ObjectHideFlags: 0

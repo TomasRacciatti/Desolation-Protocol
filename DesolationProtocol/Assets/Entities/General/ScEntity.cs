@@ -129,7 +129,7 @@ public class ScEntity : MonoBehaviour
         }
         else
         {
-            print("Silenciado");
+            //print("Silenciado");
             AudioManager.PlaySound("SFX","shh");
         }
     }
