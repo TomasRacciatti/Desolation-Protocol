@@ -92,7 +92,10 @@ public class ScEntity : MonoBehaviour
     protected virtual void Die()
     {
         OnDeath.Invoke();
-        _anim.SetTrigger("Death");
+        if (entityName != "Explosive")
+        {
+            _anim.SetTrigger("Death");
+        }
         Destroy(GetComponent<Rigidbody>());
         Destroy(GetComponent<CapsuleCollider>());
     }

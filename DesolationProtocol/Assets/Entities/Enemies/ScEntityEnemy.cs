@@ -9,6 +9,7 @@ public class ScEntityEnemy : ScEntity
     protected Transform _target;
     protected bool _active = true;
     protected bool rotateidle = false;
+    private bool _isDead = false;
 
     protected override void Awake()
     {
@@ -22,7 +23,7 @@ public class ScEntityEnemy : ScEntity
     {
         if (_active)
         {
-            if (_target)
+            if (_target && !_isDead)
             {
                 _agent.SetDestination(_target.position);
             }
@@ -36,6 +37,7 @@ public class ScEntityEnemy : ScEntity
     protected override void Die()
     {
         base.Die();
+        _isDead = true;
         StopTracking();
         Destroy(_agent);
         Destroy(gameObject, 3);
