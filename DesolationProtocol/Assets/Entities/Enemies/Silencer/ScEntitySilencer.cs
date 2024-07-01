@@ -2,8 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static System.Collections.Specialized.BitVector32;
-using static UnityEngine.EventSystems.EventTrigger;
 
 public class ScEntitySilencer : ScEntityEnemy
 {

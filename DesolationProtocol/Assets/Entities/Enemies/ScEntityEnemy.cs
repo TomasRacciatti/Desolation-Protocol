@@ -65,15 +65,6 @@ public class ScEntityEnemy : ScEntity
         }
     }
 
-    protected void RotateTracking()
-    {
-        if (health > 0)
-        {
-            _active = false;
-            _agent.SetDestination(transform.position);
-        }
-    }
-
     /*
     // NAVMESH MODIFICADO PARA QUE NO HAGA FALTA HACER ESTO POR CODIGO
 

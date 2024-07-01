@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem.HID;
 
 public class ScEntityTank : ScEntityEnemy
 {
@@ -8,28 +7,33 @@ public class ScEntityTank : ScEntityEnemy
     {
         base.Awake();
         _audioSource = GetComponent<AudioSource>();
-        KeepTracking();
+        
 
     }
 
-    /*protected override void Update()
+    private void Start()
+    {
+        KeepTracking();
+    }
+
+    protected override void Update()
     {
         base.Update();
         if (_active && !_isDead)
         {
             if (Vector3.Distance(_target.position, transform.position) < 3)
             {
-                StopTracking();
+                
                 _anim.SetBool("InRange", true);
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(_target.position - transform.position), 100 * Time.deltaTime);
+                //transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(_target.position - transform.position), 100 * Time.deltaTime);
             }
             else
             {
-                KeepTracking();
+                
                 _anim.SetBool("InRange", false);
             }
         }
-    }*/
+    }
 
     public override void TakeDamage(float incomingDamage, float incomingPenLinear = 0, float incomingPenPerc = 0)
     {
