@@ -12,6 +12,8 @@ public class ScWeapon : MonoBehaviour
     [SerializeField] private bool automatic;
     [SerializeField] private LayerMask layerMask;
 
+    [SerializeField] private Image _ammoUI;
+
     public ParticleSystem muzzleFlash;
 
     //funcionamiento
@@ -115,10 +117,11 @@ public class ScWeapon : MonoBehaviour
 
         reloading = true;
         _anim.SetBool("F_reload", true);
-        AudioManager.PlaySound("Player", "reload");
+        AudioManager.PlaySound("SFX", "reload");
 
         Invoke("FinishReload", reloadTime);
-        UpdateAmmo();
+        Invoke("UpdateAmmo", reloadTime);
+        //UpdateAmmo();
     }
 
     private void FinishReload()
@@ -136,6 +139,6 @@ public class ScWeapon : MonoBehaviour
 
     private void UpdateAmmo()
     {
-        ammoText.text = bulletsLeft.ToString();
+        _ammoUI.fillAmount = (float)bulletsLeft / magazineSize;
     }
 }
