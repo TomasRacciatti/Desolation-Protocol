@@ -11,6 +11,8 @@ public class ScWaves : MonoBehaviour
     [SerializeField] private GameObject[] Enemies;
     [SerializeField] private Transform PositionmMin;
     [SerializeField] private Transform PositionMax;
+    [SerializeField] private int spawnBase = 20;
+    [SerializeField] private int spawnIncremental = 2;
 
     void Start()
     {
@@ -19,7 +21,7 @@ public class ScWaves : MonoBehaviour
 
     void NextWave()
     {
-        for (int i = 0; i < (10 + 2 * (ActualWave - 1)); i++)
+        for (int i = 0; i < (spawnBase + spawnIncremental * (ActualWave - 1)); i++)
         {
             int random = Random.Range(0, 100);
             if (random <50)
