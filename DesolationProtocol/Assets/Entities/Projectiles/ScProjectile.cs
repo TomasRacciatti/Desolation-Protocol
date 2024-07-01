@@ -14,13 +14,14 @@ public class ScProjectile : MonoBehaviour
 
     private void Start()
     {
-        _rigidbody.velocity = transform.forward * 100;
+        _rigidbody.velocity = transform.forward * 20;
         Destroy(gameObject, 5f);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.TryGetComponent<ScEntity>(out ScEntity otherEntity))
+        ScEntity otherEntity = other.GetComponent<ScEntity>();
+        if (otherEntity)
         {
             if (owner != null)
             {
