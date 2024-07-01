@@ -10,7 +10,6 @@ public class ScHud : MonoBehaviour
     [SerializeField] ScEntity _entity;
     [SerializeField] private Slider HpBar;
     [SerializeField] private Text Wave_text;
-
     public int timer = 300;
 
     [SerializeField] private GameObject silencedHud;
@@ -67,7 +66,7 @@ public class ScHud : MonoBehaviour
         
         if (timer <= 0)
         {
-            //manda al pibe a una pantalla de victoria
+            Wave_text.text = "The help has arrived!\nGo outside to escape";
         }
         else
         {

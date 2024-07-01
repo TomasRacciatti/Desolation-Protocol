@@ -9,7 +9,6 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Level_MilitaryBase");
     }
-
     public void QuitGame ()
     {
         Application.Quit();
@@ -17,6 +16,10 @@ public class MainMenu : MonoBehaviour
     public void Prototype()
     {
         SceneManager.LoadScene("SampleScene");
+    }
+    public void Mainmenu()
+    {
+        SceneManager.LoadScene("Main_Menu");
     }
 
 }

@@ -6989,9 +6989,11 @@ MonoBehaviour:
   _minDistance: 0.5
   _maxDistance: 1
   _smooth: 10
+  _hitDistanceModifier: 0.87
   _collisionMask:
     serializedVersion: 2
     m_Bits: 1
+  dollyDirAdjusted: {x: 0, y: 0, z: 0}
 --- !u!1 &6239113011882614486
 GameObject:
   m_ObjectHideFlags: 0
