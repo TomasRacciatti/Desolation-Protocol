@@ -13,9 +13,12 @@ public class ScWaves : MonoBehaviour
     [SerializeField] private Transform PositionMax;
     [SerializeField] private int spawnBase = 20;
     [SerializeField] private int spawnIncremental = 2;
+    private Transform _target;
+    [SerializeField] private float spawnProtection = 5;
 
     void Start()
     {
+        _target = FindObjectOfType<ScEntityPlayer>().transform;
         Invoke("NextWave", 5f);
     }
 
@@ -52,12 +55,21 @@ public class ScWaves : MonoBehaviour
     }
     public void SpawnEnemy(int Class)
     {
-        Vector3 Place = new Vector3(Random.Range(PositionmMin.position.x, PositionMax.position.x), Random.Range(PositionmMin.position.y, PositionMax.position.y), Random.Range(PositionmMin.position.z, PositionMax.position.z));
-        NavMeshHit hit;
-        if (NavMesh.SamplePosition(Place, out hit, 100, NavMesh.AllAreas))
+        bool Spawn = false;
+        while (!Spawn)
         {
-            GameObject SpawnedEnemy = Instantiate(Enemies[Class], hit.position, Quaternion.identity);
-            SpawnedEnemy.GetComponent<ScEntity>().level = ActualWave;
+            Vector3 Place = new Vector3(Random.Range(PositionmMin.position.x, PositionMax.position.x), Random.Range(PositionmMin.position.y, PositionMax.position.y), Random.Range(PositionmMin.position.z, PositionMax.position.z));
+            NavMeshHit hit;
+            
+            if (NavMesh.SamplePosition(Place, out hit, 100, NavMesh.AllAreas))
+            {
+                if (Vector3.Distance(hit.position, _target.position) > spawnProtection)
+                {
+                    GameObject SpawnedEnemy = Instantiate(Enemies[Class], hit.position, Quaternion.identity);
+                    SpawnedEnemy.GetComponent<ScEntity>().level = ActualWave;
+                    Spawn = true;
+                }
+            }
         }
     }
 }
