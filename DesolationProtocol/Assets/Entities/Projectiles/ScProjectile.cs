@@ -14,7 +14,7 @@ public class ScProjectile : MonoBehaviour
 
     private void Start()
     {
-        _rigidbody.velocity = transform.forward * 100;
+        _rigidbody.velocity = transform.forward * 20;
         Destroy(gameObject, 5f);
     }
 
