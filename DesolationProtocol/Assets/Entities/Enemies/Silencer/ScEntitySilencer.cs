@@ -46,7 +46,6 @@ public class ScEntitySilencer : ScEntityEnemy
 
     protected override void Die()
     {
-        base.Die();
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, silenceDistance, layerMask);
         _audioSource.Play();
 
@@ -58,6 +57,7 @@ public class ScEntitySilencer : ScEntityEnemy
                 otherEntity.Silenced(false);
             }
         }
+        base.Die();
     }
 
     void OnDrawGizmos()

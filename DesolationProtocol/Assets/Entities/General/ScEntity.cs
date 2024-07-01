@@ -50,7 +50,6 @@ public class ScEntity : MonoBehaviour
     private void SetStats()
     {
         Stats = linkStats.GetStats(entityName, level); //get stats per lvl
-        //items modifiers
     }
 
     protected virtual void Update()
@@ -62,8 +61,6 @@ public class ScEntity : MonoBehaviour
     {
         //Regen
         if (0 < health && health < Stats.maxHealth && Stats.regeneration != 0) Heal(Stats.regeneration * Time.fixedDeltaTime);
-
-        //StepClimb();
     }
 
     //Health

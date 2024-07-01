@@ -21,7 +21,7 @@ public class ScEntityEnemy : ScEntity
 
     protected override void Update()
     {
-        if (_active)
+        if (_active && _agent)
         {
             if (_target && !_isDead)
             {
@@ -36,11 +36,11 @@ public class ScEntityEnemy : ScEntity
 
     protected override void Die()
     {
-        base.Die();
         _isDead = true;
         StopTracking();
         Destroy(_agent);
         Destroy(gameObject, 3);
+        base.Die();
     }
 
     protected void KeepTracking()
@@ -56,7 +56,10 @@ public class ScEntityEnemy : ScEntity
     protected void StopTracking()
     {
         _active = false;
-        _agent.SetDestination(transform.position);
+        if (_agent)
+        {
+            _agent.SetDestination(transform.position);
+        }
     }
 
     protected void RotateTracking()

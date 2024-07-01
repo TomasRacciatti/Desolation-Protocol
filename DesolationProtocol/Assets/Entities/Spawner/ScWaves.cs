@@ -34,7 +34,7 @@ public class ScWaves : MonoBehaviour
                 }
                 else
                 {
-                    if (random < 90)
+                    if (random < 95)
                     {
                         SpawnEnemy(2);
                     }
@@ -51,15 +51,11 @@ public class ScWaves : MonoBehaviour
     public void SpawnEnemy(int Class)
     {
         Vector3 Place = new Vector3(Random.Range(PositionmMin.position.x, PositionMax.position.x), Random.Range(PositionmMin.position.y, PositionMax.position.y), Random.Range(PositionmMin.position.z, PositionMax.position.z));
-
         NavMeshHit hit;
-
-        // Intentar encontrar una posicion valida dentro del NavMesh
         if (NavMesh.SamplePosition(Place, out hit, 100, NavMesh.AllAreas))
         {
-            // Instanciar el prefab en la posicion encontrada
             GameObject SpawnedEnemy = Instantiate(Enemies[Class], hit.position, Quaternion.identity);
-            //SpawnedEnemy.GetComponent<ScEntity>().level = ActualWave;
+            SpawnedEnemy.GetComponent<ScEntity>().level = ActualWave;
         }
     }
 }

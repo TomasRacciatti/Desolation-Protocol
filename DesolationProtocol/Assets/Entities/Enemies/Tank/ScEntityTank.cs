@@ -25,15 +25,15 @@ public class ScEntityTank : ScEntityEnemy
         {
             if (!_active)
             {
-                KeepTracking();
+                StopTracking();
                 _anim.SetBool("InRange", false);
             }
+            _rigidbody.rotation = Quaternion.RotateTowards(_rigidbody.rotation, Quaternion.LookRotation(_target.position - transform.position), Stats.movementSpeed * Time.deltaTime);
         }
     }
     public override void TakeDamage(float incomingDamage, float incomingPenLinear = 0, float incomingPenPerc = 0)
     {
         base.TakeDamage(incomingDamage, incomingPenLinear, incomingPenPerc);
         _audioSource.Play();
-
     }
 }
