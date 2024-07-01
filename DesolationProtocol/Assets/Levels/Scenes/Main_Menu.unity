@@ -632,13 +632,9 @@ MonoBehaviour:
 
     Shift
 
-    E
-
     Left click
 
-    Right Click
-
-    H
+    Q
 
     V'
   m_isRightToLeft: 0
@@ -2279,7 +2275,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1872745406107911241, guid: bec0ffe67fd6a5e478c70797bd56e56a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1872745406107911241, guid: bec0ffe67fd6a5e478c70797bd56e56a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -3756,7 +3752,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Move:\nJump:\nDash: \nInteract:\nShoot:\nAim:\nHeal:\nTeleport:"
+  m_text: "Move:\nJump:\nDash: \nShoot:\nHeal:\nTeleport:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0054971aab99cac48b253303f574de1a, type: 2}
   m_sharedMaterial: {fileID: 4000772350058588808, guid: 0054971aab99cac48b253303f574de1a, type: 2}
