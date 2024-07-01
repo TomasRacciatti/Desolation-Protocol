@@ -9,13 +9,17 @@ public class ScEntityEnemy : ScEntity
     protected Transform _target;
     protected bool _active = true;
     protected bool rotateidle = false;
-    private bool _isDead = false;
+    protected bool _isDead = false;
 
     protected override void Awake()
     {
         base.Awake();
         _agent = GetComponent<NavMeshAgent>();
         _target = FindObjectOfType<ScEntityPlayer>().transform;
+    }
+
+    private void Start()
+    {
         _agent.speed = Stats.movementSpeed;
     }
 
@@ -47,7 +51,6 @@ public class ScEntityEnemy : ScEntity
     {
         if (health > 0)
         {
-            _agent.speed = Stats.movementSpeed;
             _active = true;
             _agent.SetDestination(_target.position);
         }
@@ -66,7 +69,6 @@ public class ScEntityEnemy : ScEntity
     {
         if (health > 0)
         {
-            _agent.speed = 0;
             _active = false;
             _agent.SetDestination(transform.position);
         }

@@ -13,24 +13,22 @@ public class ScEntityTank : ScEntityEnemy
     protected override void Update()
     {
         base.Update();
-        if (Vector3.Distance(_target.position, transform.position) < 3)
+        if (_active && !_isDead)
         {
-            if (_active)
-            {
-                RotateTracking();
-                _anim.SetBool("InRange", true);
-            }
-        }
-        else
-        {
-            if (!_active)
+            if (Vector3.Distance(_target.position, transform.position) < 3)
             {
                 StopTracking();
+                _anim.SetBool("InRange", true);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(_target.position - transform.position), 100 * Time.deltaTime);
+            }
+            else
+            {
+                KeepTracking();
                 _anim.SetBool("InRange", false);
             }
-            _rigidbody.rotation = Quaternion.RotateTowards(_rigidbody.rotation, Quaternion.LookRotation(_target.position - transform.position), Stats.movementSpeed * Time.deltaTime);
         }
     }
+
     public override void TakeDamage(float incomingDamage, float incomingPenLinear = 0, float incomingPenPerc = 0)
     {
         base.TakeDamage(incomingDamage, incomingPenLinear, incomingPenPerc);

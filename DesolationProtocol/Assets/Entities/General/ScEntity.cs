@@ -25,10 +25,6 @@ public class ScEntity : MonoBehaviour
     //effects
     public int silencers = 0;
 
-    public UnityEvent OnTakingDmg;
-    public UnityEvent OnHeal;
-    public UnityEvent OnDeath;
-
     public AudioManager AudioManager;
 
     protected virtual void Awake()
@@ -68,7 +64,6 @@ public class ScEntity : MonoBehaviour
     {
         if (health > 0)
         {
-            OnTakingDmg.Invoke();
             float finalArmor = (Stats.armor * (1 - incomingPenPerc) - incomingPenLinear); //Define Final Armor
             if (finalArmor >= 0)
             {
@@ -88,7 +83,6 @@ public class ScEntity : MonoBehaviour
 
     protected virtual void Die()
     {
-        OnDeath.Invoke();
         if (entityName != "Explosive")
         {
             _anim.SetTrigger("Death");
@@ -99,7 +93,6 @@ public class ScEntity : MonoBehaviour
 
     public virtual void Heal(float heal)
     {
-        OnHeal.Invoke();
         health += heal;
         if (health > Stats.maxHealth) health = Stats.maxHealth;
     }

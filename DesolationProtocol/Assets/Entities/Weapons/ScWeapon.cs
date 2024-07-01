@@ -86,13 +86,13 @@ public class ScWeapon : MonoBehaviour
 
         Vector3 targetpoint;
 
-        if (Physics.Raycast(ray,out RaycastHit hit, 100, layerMask))
+        if (Physics.Raycast(ray,out RaycastHit hit, 10, layerMask))
         {
             targetpoint = hit.point;
         }
         else
         {
-            targetpoint = ray.GetPoint(100);
+            targetpoint = ray.GetPoint(10);
         }
         Vector3 direction = atackPoint.position - targetpoint;
 
