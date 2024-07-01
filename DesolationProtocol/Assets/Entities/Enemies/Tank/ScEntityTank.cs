@@ -8,9 +8,11 @@ public class ScEntityTank : ScEntityEnemy
     {
         base.Awake();
         _audioSource = GetComponent<AudioSource>();
+        KeepTracking();
+
     }
 
-    protected override void Update()
+    /*protected override void Update()
     {
         base.Update();
         if (_active && !_isDead)
@@ -27,7 +29,7 @@ public class ScEntityTank : ScEntityEnemy
                 _anim.SetBool("InRange", false);
             }
         }
-    }
+    }*/
 
     public override void TakeDamage(float incomingDamage, float incomingPenLinear = 0, float incomingPenPerc = 0)
     {
